@@ -33,19 +33,42 @@
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation"><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#juegoIA">Jugar con la IA</button></li>
             <div id="juegoIA" class="collapse">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-12">
+                  <p>Jugador 1</p>
+                  <label class="radio-inline"><input type="radio" name="optradio">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">Scissors</label>
+                  <p><!-- Divider--></p>
+                  <button type="button" class="btn btn-info">Jugar!</button>
+                </div>
+              </div>
             </div>
           <li role="separator" class="divider">---</li>
           <li role="presentation"><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#juego2J">Jugar con otro jugador</button></li>
             <div id="juego2J" class="collapse">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+                  <p id="j1">Jugador 1</p>
+                  <label class="radio-inline"><input type="radio" name="optradio1">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradio1">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradio1">Scissors</label>
+                  <p><!-- Divider--></p>
+                  <button type="button" class="btn btn-info">Jugar!</button>
+                </div>
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+                 <p><!-- Divider--></p>
+                 <p id="j2">Jugador 2</p>
+                  <label class="radio-inline"><input type="radio" name="optradio2">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradio2">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradio2">Scissors</label>
+                  <p><!-- Divider--></p>
+                  <button type="button" class="btn btn-info">Jugar!</button>
+                </div>
+              </div>
             </div>
           <li role="separator" class="divider">---</li>
-          <!-- Poner evento alert/COLLAPSE? con info de resultados -->
+          <!-- Poner evento alert/COLLAPSE?/MODAL! con info de resultados -->
           <li role="presentation"><button type="button" class="btn btn-primary">Consultar Resultados</button></li>
 
         </ul>
