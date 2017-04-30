@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.container {
+  width: auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
+}
+
+.jumbotron {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.pull-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
