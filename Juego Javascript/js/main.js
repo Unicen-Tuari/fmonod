@@ -82,17 +82,22 @@ function juego1vs2(){
 }
 
 function jugadaJ1(){
-let jugador1 = document.querySelector('input[name = "optradiox"]:checked').value;
-let menuJ1 = document.getElementById('j1');
-let menuJ2 = document.getElementById('j2');
-switchDivDisplay(menuJ1,menuJ2);
-return jugador1;
+  let jugador1 = document.querySelector('input[name = "optradiox"]:checked').value;
+  let menuJ1 = document.getElementById('j1');
+  let menuJ2 = document.getElementById('j2');
+  switchDivDisplay(menuJ1,menuJ2);
+  return jugador1;
 }
 
 function jugadaIA(){
-  // Checkear con un if haciendo get del checkbox de variacion de probabilidad
   let randomIA = Math.floor((Math.random() * 3) + 1);
   let eleccionIA = "";
+  // Checkear con un if haciendo get del checkbox de variacion de probabilidad
+  let checkFlag = document.getElementById('isVar').checked;
+  if (checkFlag) {
+  randomIA = Math.floor((Math.random() * 2) + 1);
+  }
+
   switch (randomIA) {
     case 1:
       eleccionIA = "Rock";
@@ -112,6 +117,7 @@ function jugadaIA(){
 }
 
 function switchDivDisplay(div1,div2){
+  //Esta funcion recibe dos elementos div y cambia su visibilidad
   div1.style.display = "none";
   div2.style.display = "block";
 }
