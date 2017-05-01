@@ -36,11 +36,28 @@
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-xs-12 col-sm-12">
                   <p>Jugador 1</p>
-                  <label class="radio-inline"><input type="radio" name="optradio">Rock</label>
-                  <label class="radio-inline"><input type="radio" name="optradio">Paper</label>
-                  <label class="radio-inline"><input type="radio" name="optradio">Scissors</label>
+                  <p id="ingresojugada">Ingrese su jugada</p>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="Rock" checked="">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="Paper">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="Scissors">Scissors</label>
                   <p><!-- Divider--></p>
-                  <button type="button" class="btn btn-info">Jugar!</button>
+                  <button type="button" class="btn btn-info" id="jugar-vs-ia" data-toggle="modal" data-target="#Modal1vsIA">Jugar!</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="Modal1vsIA" tabindex="-1" role="dialog" aria-labelledby="Modal1vsIA">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="Modal1vsIAlabel">Resultado del juego</h4>
+                      </div>
+                      <div class="modal-body" id="modal-body-1vsIA">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,11 +67,13 @@
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
                   <p id="j1">Jugador 1</p>
+                  <p id="ingresojugada">Ingrese su jugada</p>
                   <label class="radio-inline"><input type="radio" name="optradio1">Rock</label>
                   <label class="radio-inline"><input type="radio" name="optradio1">Paper</label>
                   <label class="radio-inline"><input type="radio" name="optradio1">Scissors</label>
                   <p><!-- Divider--></p>
                   <button type="button" class="btn btn-info">Jugar!</button>
+
                 </div>
                 <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
                  <p><!-- Divider--></p>

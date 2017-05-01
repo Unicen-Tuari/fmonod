@@ -11,6 +11,12 @@ body {
   margin-bottom: 60px;
 }
 
+#ingresojugada{
+  text-align: center;
+  font-style: italic;
+  font-size: small;
+}
+
 .container {
   width: auto;
   min-height: 100%;
