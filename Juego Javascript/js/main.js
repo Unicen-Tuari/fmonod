@@ -154,6 +154,22 @@ function changeBgColor(){
       });
 }
 
+function frontendLogin(){
+//Aclaro por las dudas en el nombre de la funcion que no uso ninguna validacion de backend (archivos,db,etc)
+let user;
+let pass;
+let checkFlag = document.getElementById('isVar');
+user = prompt("Usuario:","Juan Perez");
+pass = prompt("Contraseña:","");
+if (user === null || user === "" || pass === null || pass === "") {
+        alert("User cancelled the prompt.");
+    }
+else if (user === "admin" && pass === "admin") {
+  checkFlag.disabled = false;
+}
+
+}
+
 function main(){
   let btnjugarvsia = document.getElementById('jugar-vs-ia');
   btnjugarvsia.addEventListener("click", juego1vsIA);
@@ -169,5 +185,7 @@ function main(){
   btnresult.addEventListener("click", showGameCounters);
   let btncolorpicker = document.getElementById('colorpickerbtn');
   btncolorpicker.addEventListener("click", changeBgColor);
+  let btnlogin = document.getElementById('adminLogin');
+  btnlogin.addEventListener("click", frontendLogin);
 }
 main();

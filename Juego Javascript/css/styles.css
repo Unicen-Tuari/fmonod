@@ -17,6 +17,11 @@ body {
   font-size: small;
 }
 
+#adminLogin{
+margin-top: 250px;
+
+}
+
 .container {
   width: auto;
   min-height: 100%;
