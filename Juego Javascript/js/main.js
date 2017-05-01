@@ -1,5 +1,8 @@
 "use strict";
-
+let contadorPartidasJ1 = 0;
+let contadorPartidasJ2 = 0;
+let contadorPartidasIA = 0;
+//Me molesta usar variables globales pero no pude encontrar una manera de llamar los contadores desde una funcion
 function juego(id1,jugada1,id2,jugada2){
   let resultado;
   switch (jugada1) {
@@ -69,6 +72,12 @@ function juego1vsIA(){
   modalBody1vsIA.innerHTML = resultadoJuego1vsIA + "<br>";
   modalBody1vsIA.innerHTML += "Jugador 1 escogio: " + jugador1 + "<br>";
   modalBody1vsIA.innerHTML += "Jugador IA escogio: " + jugadorIA;
+  if (resultadoJuego1vsIA === "Jugador 1 gana!") {
+  contadorPartidasJ1 += 1;
+  }
+  else if (resultadoJuego1vsIA !== "Empate!") {
+  contadorPartidasIA += 1;
+  }
 }
 
 function juego1vs2(){
@@ -79,6 +88,12 @@ function juego1vs2(){
   modalBody1vs2.innerHTML = resultadoJuego1vs2 + "<br>";
   modalBody1vs2.innerHTML += "Jugador 1 escogio: " + jugador1 + "<br>";
   modalBody1vs2.innerHTML += "Jugador 2 escogio: " + jugador2;
+  if (resultadoJuego1vs2 === "Jugador 1 gana!") {
+  contadorPartidasJ1 += 1;
+  }
+  else if (resultadoJuego1vs2 !== "Empate!") {
+  contadorPartidasJ2 += 1;
+  }
 }
 
 function jugadaJ1(){
@@ -122,9 +137,14 @@ function switchDivDisplay(div1,div2){
   div2.style.display = "block";
 }
 
+function showGameCounters(){
+  let modalBodyResult = document.getElementById('modal-body-result');
+  modalBodyResult.innerHTML = "Partidas ganadas por Jugador 1: " + contadorPartidasJ1 + "<br>";
+  modalBodyResult.innerHTML += "Partidas ganadas por Jugador 2: " + contadorPartidasJ2 + "<br>";
+  modalBodyResult.innerHTML += "Partidas ganadas por Jugador IA: " + contadorPartidasIA;
+}
+
 function main(){
-  let contadorPartidasJ1 = 0;
-  let contadorPartidasIA = 0;
   let btnjugarvsia = document.getElementById('jugar-vs-ia');
   btnjugarvsia.addEventListener("click", juego1vsIA);
   let btnjugarj1 = document.getElementById('jugar-j1');
@@ -135,5 +155,7 @@ function main(){
   btnclosemodal.addEventListener("click",function(e) {
     switchDivDisplay(document.getElementById('j2'),document.getElementById('j1'));
   } );
+  let btnresult = document.getElementById('resultados');
+  btnresult.addEventListener("click", showGameCounters);
 }
 main();
