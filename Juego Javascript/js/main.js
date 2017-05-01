@@ -144,6 +144,16 @@ function showGameCounters(){
   modalBodyResult.innerHTML += "Partidas ganadas por Jugador IA: " + contadorPartidasIA;
 }
 
+function changeBgColor(){
+  $(document).ready(function () {
+    //color picker with addon
+    $("#colorpickerbtn").colorpicker().on('changeColor', function(e) {
+            $('body')[0].style.backgroundColor = e.color.toString(
+                'rgba');
+        });
+      });
+}
+
 function main(){
   let btnjugarvsia = document.getElementById('jugar-vs-ia');
   btnjugarvsia.addEventListener("click", juego1vsIA);
@@ -157,5 +167,7 @@ function main(){
   } );
   let btnresult = document.getElementById('resultados');
   btnresult.addEventListener("click", showGameCounters);
+  let btncolorpicker = document.getElementById('colorpickerbtn');
+  btncolorpicker.addEventListener("click", changeBgColor);
 }
 main();
