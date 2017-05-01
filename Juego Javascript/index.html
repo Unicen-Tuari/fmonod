@@ -55,9 +55,9 @@
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       </div>
-                    </div>
-                  </div>
-                  </div>
+                    </div><!-- /.modal-content -->
+                   </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
                 </div>
               </div>
             </div>
@@ -65,24 +65,40 @@
           <li role="presentation"><button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#juego2J">Jugar con otro jugador</button></li>
             <div id="juego2J" class="collapse">
               <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
-                  <p id="j1">Jugador 1</p>
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12" id="j1">
+                  <p>Jugador 1</p>
                   <p id="ingresojugada">Ingrese su jugada</p>
-                  <label class="radio-inline"><input type="radio" name="optradio1">Rock</label>
-                  <label class="radio-inline"><input type="radio" name="optradio1">Paper</label>
-                  <label class="radio-inline"><input type="radio" name="optradio1">Scissors</label>
+                  <label class="radio-inline"><input type="radio" name="optradiox" value="Rock" checked="">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradiox" value="Paper">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradiox" value="Scissors">Scissors</label>
                   <p><!-- Divider--></p>
-                  <button type="button" class="btn btn-info">Jugar!</button>
+                  <button type="button" class="btn btn-info" id="jugar-j1">Jugar!</button>
 
                 </div>
-                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
-                 <p><!-- Divider--></p>
-                 <p id="j2">Jugador 2</p>
-                  <label class="radio-inline"><input type="radio" name="optradio2">Rock</label>
-                  <label class="radio-inline"><input type="radio" name="optradio2">Paper</label>
-                  <label class="radio-inline"><input type="radio" name="optradio2">Scissors</label>
+                <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12" id="j2" hidden="">
+                 <p>Jugador 2</p>
+                 <p id="ingresojugada">Ingrese su jugada</p>
+                  <label class="radio-inline"><input type="radio" name="optradioy" value="Rock" checked="">Rock</label>
+                  <label class="radio-inline"><input type="radio" name="optradioy" value="Paper">Paper</label>
+                  <label class="radio-inline"><input type="radio" name="optradioy" value="Scissors">Scissors</label>
                   <p><!-- Divider--></p>
-                  <button type="button" class="btn btn-info">Jugar!</button>
+                  <button type="button" class="btn btn-info" id="jugar-j2" data-toggle="modal" data-target="#Modal1vs2">Jugar!</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="Modal1vs2" tabindex="-1" role="dialog" aria-labelledby="Modal1vs2">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="Modal1vs2label">Resultado del juego</h4>
+                      </div>
+                      <div class="modal-body" id="modal-body-1vs2">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="close1vs2">Close</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                   </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
                 </div>
               </div>
             </div>
