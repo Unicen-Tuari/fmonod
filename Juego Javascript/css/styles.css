@@ -6,10 +6,6 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
 
 #ingresojugada{
   text-align: center;
@@ -19,6 +15,9 @@ body {
 
 #adminLogin{
   margin-top: 250px;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
 }
 
 .container {
@@ -26,13 +25,18 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -50px;
+  margin: 0 auto 80px;
 }
 
 .jumbotron {
   text-align: center;
   width: 50%;
   margin: auto;
+  min-width: 150px;
+}
+
+.botones{
+  white-space: normal !important;
 }
 
 .pull-footer{
