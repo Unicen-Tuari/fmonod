@@ -147,6 +147,7 @@ function showGameCounters(){
 function changeBgColor(){
   $(document).ready(function () {
     //color picker with addon
+    $("#colorpickerbtn").click();
     $("#colorpickerbtn").colorpicker().on('changeColor', function(e) {
             $('body')[0].style.backgroundColor = e.color.toString(
                 'rgba');
