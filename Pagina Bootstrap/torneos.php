@@ -41,44 +41,82 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">MMA Championship</a>
+              <a class="navbar-brand" href="index.php">MMA Championship</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="torneos.html">Torneos</a></li>
-                <li><a href="luchadores.html">Luchadores</a></li>
-                <li class="active"><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li class="active"><a href="torneos.php">Torneos</a></li>
+                <li><a href="luchadores.php">Luchadores</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
       </div>
     </div><!-- /.navbar-wrapper -->
-  <div ID="contenido">
+<div ID="contenido">
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
-          <form>
-            <div class="form-group">
-              <label for="name">Nombre y Apellido</label>
-              <input type="text" class="form-control" id="name" placeholder="Juan Perez">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="juanperez@gmail.com">
-            </div>
-            <div class="form-group">
-              <label for="consulta">Consulta</label>
-              <textarea class="form-control" rows="3" id="consulta"></textarea>
-              <p class="help-block">Ingrese su consulta sobre torneos</p>
-            </div>
-            <button type="submit" class="btn btn-default">Enviar</button>
-          </form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                  Nombre
+                </th>
+                <th>
+                  Fechas
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  MMA Super super PRO
+                </td>
+                <td>
+                  12/4/2999
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MMA Super super super PRO
+                </td>
+                <td>
+                  1/2/3000
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MMA Super Ultra PRO
+                </td>
+                <td>
+                  2/5/3001
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MMA Super Giga PRO
+                </td>
+                <td>
+                  31/12/3002
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MMA Super Infinite
+                </td>
+                <td>
+                  12/4/????
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div><!-- /.container -->
-  </div>
+</div>
     <!-- FOOTER -->
     <footer class="pull-footer">
       <p><a href="#">Back to top</a></p>
