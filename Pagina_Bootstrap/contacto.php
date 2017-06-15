@@ -54,6 +54,7 @@
         </nav>
       </div>
     </div><!-- /.navbar-wrapper -->
+
   <div ID="contenido">
     <div class="container">
       <div class="row">
@@ -78,6 +79,7 @@
       </div>
     </div><!-- /.container -->
   </div>
+  
     <!-- FOOTER -->
     <footer class="pull-footer">
       <p><a href="#">Back to top</a></p>

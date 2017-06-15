@@ -54,68 +54,70 @@
         </nav>
       </div>
     </div><!-- /.navbar-wrapper -->
-<div ID="contenido">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>
-                  Nombre
-                </th>
-                <th>
-                  Fechas
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  MMA Super super PRO
-                </td>
-                <td>
-                  12/4/2999
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  MMA Super super super PRO
-                </td>
-                <td>
-                  1/2/3000
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  MMA Super Ultra PRO
-                </td>
-                <td>
-                  2/5/3001
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  MMA Super Giga PRO
-                </td>
-                <td>
-                  31/12/3002
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  MMA Super Infinite
-                </td>
-                <td>
-                  12/4/????
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+  <div ID="contenido">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>
+                    Nombre
+                  </th>
+                  <th>
+                    Fechas
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    MMA Super super PRO
+                  </td>
+                  <td>
+                    12/4/2999
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    MMA Super super super PRO
+                  </td>
+                  <td>
+                    1/2/3000
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    MMA Super Ultra PRO
+                  </td>
+                  <td>
+                    2/5/3001
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    MMA Super Giga PRO
+                  </td>
+                  <td>
+                    31/12/3002
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    MMA Super Infinite
+                  </td>
+                  <td>
+                    12/4/????
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-    </div><!-- /.container -->
-</div>
+      </div><!-- /.container -->
+  </div>
+  
     <!-- FOOTER -->
     <footer class="pull-footer">
       <p><a href="#">Back to top</a></p>

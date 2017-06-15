@@ -55,37 +55,91 @@
       </div>
     </div><!-- /.navbar-wrapper -->
 
-
-<div ID="contenido">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
-          <div class="list-group">
-            <a href="https://www.youtube.com/watch?v=ipyAO6x3qyg" target="_blank" class="list-group-item">
-              <span class="badge">14</span>
-              Campeon 1 - Argentina
-            </a>
-            <a href="https://www.youtube.com/watch?v=aPHacO6BKpw" target="_blank" class="list-group-item">
-              <span class="badge">3</span>
-              Campeon 2 - Malasia
-            </a>
-            <a href="https://www.youtube.com/watch?v=oS2OF8oWPzg" target="_blank" class="list-group-item">
-              <span class="badge">27</span>
-              Campeon 3 - Brasil
-            </a>
-            <a href="https://www.youtube.com/watch?v=s2MeT3UDk9Y" target="_blank" class="list-group-item">
-              <span class="badge">1</span>
-              Campeon 4 - Nicaragua
-            </a>
-            <a href="https://www.youtube.com/watch?v=3DCKF69JYQs" target="_blank" class="list-group-item">
-              <span class="badge">9</span>
-              Campeon 5 - Antartida
-            </a>
+  <div ID="contenido">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
+            <div class="list-group">
+              <a class="list-group-item" data-toggle="collapse" data-target="#campeon1">
+                <span class="badge">14</span>
+                Campeon 1 - Argentina
+              </a>
+              <div class="collapse" id="campeon1">
+                <div class="well">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p><!-- Divider--></p>
+                  <a class="btn btn-primary" type="button" href="https://www.youtube.com/watch?v=ipyAO6x3qyg" target="_blank">
+                    Ver Pelea
+                  </a>
+                </div>
+              </div>
+              <a class="list-group-item" data-toggle="collapse" data-target="#campeon2">
+                <span class="badge">3</span>
+                Campeon 2 - Malasia
+              </a>
+              <div class="collapse" id="campeon2">
+                <div class="well">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p><!-- Divider--></p>
+                  <a class="btn btn-primary" type="button" href="https://www.youtube.com/watch?v=aPHacO6BKpw" target="_blank">
+                    Ver Pelea
+                  </a>
+                </div>
+              </div>
+              <a class="list-group-item" data-toggle="collapse" data-target="#campeon3">
+                <span class="badge">27</span>
+                Campeon 3 - Brasil
+              </a>
+              <div class="collapse" id="campeon3">
+                <div class="well">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p><!-- Divider--></p>
+                  <a class="btn btn-primary" type="button" href="https://www.youtube.com/watch?v=oS2OF8oWPzg" target="_blank">
+                    Ver Pelea
+                  </a>
+                </div>
+              </div>
+              <a class="list-group-item" data-toggle="collapse" data-target="#campeon4">
+                <span class="badge">1</span>
+                Campeon 4 - Nicaragua
+              </a>
+              <div class="collapse" id="campeon4">
+                <div class="well">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p><!-- Divider--></p>
+                  <a class="btn btn-primary" type="button" href="https://www.youtube.com/watch?v=s2MeT3UDk9Y" target="_blank">
+                    Ver Pelea
+                  </a>
+                </div>
+              </div>
+              <a class="list-group-item" data-toggle="collapse" data-target="#campeon5">
+                <span class="badge">9</span>
+                Campeon 5 - Antartida
+              </a>
+              <div class="collapse" id="campeon5">
+                <div class="well">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p><!-- Divider--></p>
+                  <a class="btn btn-primary" type="button" href="https://www.youtube.com/watch?v=3DCKF69JYQs" target="_blank">
+                    Ver Pelea
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div><!-- /.container -->
-</div>
+      </div><!-- /.container -->
+  </div>
 
     <!-- FOOTER -->
     <footer class="pull-footer">
