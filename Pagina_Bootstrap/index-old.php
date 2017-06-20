@@ -1,4 +1,59 @@
-{include file="header.tpl"}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MMA Championship</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/mmaStyle.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <!-- Load Favicon -->
+    <link href="favicon.ico" rel="shorcut icon">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">MMA Championship</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="torneos.php">Torneos</a></li>
+                <li><a href="luchadores.php">Luchadores</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      </div>
+    </div><!-- /.navbar-wrapper -->
       <!-- Carousel ================================================== -->
       <div id="carouselMMA" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -76,20 +131,58 @@
 
 
          <!-- START THE FEATURETTES -->
-         {foreach $articles as $article}
+
          <hr class="featurette-divider">
 
          <div class="row featurette">
            <div class="col-md-7">
-             <h2 class="featurette-heading">{$heading} <span class="text-muted">{$muted}</span></h2>
-             <p class="lead">{$article}</p>
+             <h2 class="featurette-heading">Conseguir equipo de entrenamiento <span class="text-muted">a un precio especial.</span></h2>
+             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
            </div>
            <div class="col-md-5">
-             <img class="featurette-image img-responsive center-block" src="images/{$image}" alt="Generic placeholder image">
+             <img class="featurette-image img-responsive center-block" src="images/equipo-entrenamiento.jpg" alt="Generic placeholder image">
            </div>
          </div>
-         {/foreach}
+
+         <hr class="featurette-divider">
+
+         <div class="row featurette">
+           <div class="col-md-7 col-md-push-5">
+             <h2 class="featurette-heading">Entrena con nosotros. <span class="text-muted">Velo tu mismo</span></h2>
+             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+           </div>
+           <div class="col-md-5 col-md-pull-7">
+             <img class="featurette-image img-responsive center-block" src="images/mma-training.jpg" alt="Generic placeholder image">
+           </div>
+         </div>
+
+         <hr class="featurette-divider">
+
+         <div class="row featurette">
+           <div class="col-md-7">
+             <h2 class="featurette-heading">Siguenos en nuestras redes sociales, <span class="text-muted">no te pierdas de nada</span></h2>
+             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+           </div>
+           <div class="col-md-5">
+             <img class="featurette-image img-responsive center-block" src="images/redes-sociales.jpg" alt="Generic placeholder image">
+           </div>
+         </div>
+
+         <hr class="featurette-divider">
          <!-- /END THE FEATURETTES -->
 
        </div><!-- /.container -->
-{include file="index-footer.tpl"}
+
+       <!-- FOOTER -->
+       <footer class="index-footer">
+         <p><a href="#">Back to top</a></p>
+         <p>&copy; 2017 Facundo Monod &middot; <a href="https://themes.getbootstrap.com/pages/privacy-policy" target="_blank">Privacy</a> &middot; <a href="https://themes.getbootstrap.com/pages/terms-of-service" target="_blank">Terms</a></p>
+       </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
