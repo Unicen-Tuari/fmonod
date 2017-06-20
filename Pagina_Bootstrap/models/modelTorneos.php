@@ -24,16 +24,22 @@ class ModelTorneos
     //var_dump($consulta->errorInfo());
   }
 
-  function BorrarTorneo($id_torneos)
+  function BorrarTorneo($id_torneo)
   {
-    $sentencia = $this->db->prepare("DELETE FROM torneos WHERE id_torneos = ?");
-    $sentencia->execute(array($id_torneos));
+    $sentencia = $this->db->prepare("DELETE FROM torneos WHERE id_torneo = ?");
+    $sentencia->execute(array($id_torneo));
   }
 
-  function GetTorneo($id_torneos)
+  function ModificarNoticia($id_torneo,$nombre_torneo, $lugar, $fecha_torneo)
   {
-    $consulta = $this->db->prepare("SELECT * FROM torneos WHERE id_torneos = ?");
-    $result = $consulta->execute(array($id_torneos));
+    $sentencia = $this->db->prepare("UPDATE torneos SET nombre_torneo=?,lugar=?,fecha_torneo=? WHERE id_torneo=?");
+    $sentencia->execute(array($id_torneo,$nombre_torneo, $lugar, $fecha_torneo));
+  }
+
+  function GetTorneo($id_torneo)
+  {
+    $consulta = $this->db->prepare("SELECT * FROM torneos WHERE id_torneo = ?");
+    $result = $consulta->execute(array($id_torneo));
     return $consulta->fetch();
   }
 }

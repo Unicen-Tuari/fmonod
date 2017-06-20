@@ -48,20 +48,26 @@
                {if $titulo == "Torneos MMA"}
                <li class="active"><a href="#">Home</a></li>
                <li><a href="torneos.php">Torneos</a></li>
-               <li><a href="controllers/controllerLuchadores.php">Luchadores</a></li>
+               <li><a href="luchadores.php">Luchadores</a></li>
                <li><a href="contacto.php">Contacto</a></li>
                {else}
                {if $titulo == "Informacion Luchadores"}
                <li><a href="#">Home</a></li>
                <li><a href="torneos.php">Torneos</a></li>
-               <li class="active"><a href="controllers/controllerLuchadores.php">Luchadores</a></li>
+               <li class="active"><a href="luchadores.php">Luchadores</a></li>
                <li><a href="contacto.php">Contacto</a></li>
                {/if}
                {if $titulo == "Fechas Torneos"}
                <li><a href="#">Home</a></li>
                <li class="active"><a href="torneos.php">Torneos</a></li>
-               <li><a href="controllers/controllerLuchadores.php">Luchadores</a></li>
+               <li><a href="luchadores.php">Luchadores</a></li>
                <li><a href="contacto.php">Contacto</a></li>
+               {/if}
+               {if $titulo == "Formulario de consultas"}
+               <li><a href="#">Home</a></li>
+               <li><a href="torneos.php">Torneos</a></li>
+               <li><a href="luchadores.php">Luchadores</a></li>
+               <li class="active"><a href="contacto.php">Contacto</a></li>
                {/if}
                {/if}
                <!--TODO Las redirecciones se haran desde el route cuando se implemente -->

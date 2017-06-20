@@ -1,7 +1,6 @@
 <?php
-require_once('/../views/viewLuchadores.php');
-require_once('/../models/modelLuchadores.php');
-//TODO Quitar el back path
+require_once('views/viewLuchadores.php');
+require_once('models/modelLuchadores.php');
 
 class ControllerLuchadores
 {

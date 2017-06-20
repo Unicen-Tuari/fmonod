@@ -16,11 +16,11 @@ class ModelNoticias
     return $consulta->fetchAll();
   }
 
-  function InsertarNoticia($titulo, $titulo_muted, $detalle, $autor)
+  function InsertarNoticia($titulo, $titulo_muted, $detalle, $autor, $imagen)
   {
-    $consulta = $this->db->prepare("INSERT INTO noticias (titulo, titulo_muted, detalle, autor) ".
-                "VALUES (?,?,?,?)");
-    $result = $consulta->execute(array($titulo, $titulo_muted, $detalle, $autor));
+    $consulta = $this->db->prepare("INSERT INTO noticias (titulo, titulo_muted, detalle, autor, imagen) ".
+                "VALUES (?,?,?,?,?)");
+    $result = $consulta->execute(array($titulo, $titulo_muted, $detalle, $autor, $imagen));
     //var_dump($consulta->errorInfo());
   }
 
@@ -28,6 +28,12 @@ class ModelNoticias
   {
     $sentencia = $this->db->prepare("DELETE FROM noticias WHERE id_noticia=?");
     $sentencia->execute(array($id_noticia));
+  }
+
+  function ModificarNoticia($id_noticia,$titulo, $titulo_muted, $detalle, $imagen)
+  {
+    $sentencia = $this->db->prepare("UPDATE noticias SET titulo=?,titulo_muted=?,detalle=?,imagen=? WHERE id_noticia=?");
+    $sentencia->execute(array($id_noticia,$titulo, $titulo_muted, $detalle, $imagen));
   }
 
   function GetNoticia($id_noticia)

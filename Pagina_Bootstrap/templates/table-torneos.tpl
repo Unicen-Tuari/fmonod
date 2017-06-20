@@ -12,20 +12,23 @@
                 <th>
                   Fechas
                 </th>
+                <th>
+                  Lugar
+                </th>
               </tr>
             </thead>
             <tbody>
-              {foreach from=$torneos item=torneo}
+              {foreach $torneos as $torneo}
               <tr>
-                {foreach from=$torneo item=nombre item=fecha}
                 <td>
-                  {$nombre}
+                  {$torneo.nombre_torneo}
                 </td>
                 <td>
-                  {$fecha}
+                  {$torneo.fecha_torneo}
                 </td>
-              </tr>
-              {/foreach}
+                <td>
+                  {$torneo.lugar}
+                </td>
             </tbody>
             {/foreach}
           </table>

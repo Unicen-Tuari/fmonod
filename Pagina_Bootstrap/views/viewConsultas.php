@@ -3,7 +3,7 @@
 /**
  *
  */
-class ViewTorneos
+class ViewConsultas
 {
   private $smarty;
   private $baseDir;
@@ -14,12 +14,11 @@ class ViewTorneos
     $this->baseDir = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/';
   }
 
-  function mostrarTorneos($titulo, $torneos){
+  function mostrarContacto($titulo){
     $this->smarty->assign("titulo", $titulo);
-    $this->smarty->assign("torneos", $torneos);
     $this->smarty->assign("baseDir", $this->baseDir);
 
-    $this->smarty->display('table-torneos.tpl');
+    $this->smarty->display('consultas.tpl');
   }
 
 }

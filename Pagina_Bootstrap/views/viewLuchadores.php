@@ -1,10 +1,9 @@
 <?php
-  require_once('/../libs/Smarty.class.php');
-  //TODO Quitar el back path
+  require_once('libs/Smarty.class.php');
 /**
  *
  */
-class ViewNoticias
+class ViewLuchadores
 {
   private $smarty;
   private $baseDir;
