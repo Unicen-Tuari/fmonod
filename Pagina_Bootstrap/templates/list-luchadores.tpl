@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
           <div class="list-group">
-            {foreach $champions as $champion}
-            <a href="{$link}" target="_blank" class="list-group-item">
-              <span class="badge">{$n}</span>
-              {$champion}
+            {foreach $luchadores as $luchador}
+            <a href="{$luchador.link}" target="_blank" class="list-group-item">
+              <span class="badge">{$luchador.torneos_ganados}</span>
+              {$luchador.historia}
             </a>
             {/foreach}
           </div>
