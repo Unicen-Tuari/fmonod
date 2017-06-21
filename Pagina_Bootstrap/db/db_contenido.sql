@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2017 a las 05:36:43
+-- Tiempo de generación: 21-06-2017 a las 19:48:51
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `db_contenido`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `consultas`
+--
+
+CREATE TABLE `consultas` (
+  `id_consulta` int(11) NOT NULL,
+  `nombre_apellido` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `texto` text NOT NULL,
+  `fecha_consulta` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Volcado de datos para la tabla `consultas`
+--
+
+INSERT INTO `consultas` (`id_consulta`, `nombre_apellido`, `email`, `texto`, `fecha_consulta`) VALUES
+(1, 'Pololo', 'pololo@retrucho.com', 'Alta pagina vieja', '2017-06-21 00:03:22'),
+(2, 'Pirinporimo del Pirineo de los Palicios', 'pirinporimo@mailinator.com', 'Pololo es un gato\r\n', '2017-06-21 00:04:05'),
+(3, 'Das', 'das@mailmuyinteresante.com', 'FAAAAAAAAAAAAA', '2017-06-21 00:05:37'),
+(4, 'Carlitos', 'carlitos.el.listo@google.com', 'Que listo que soy', '2017-06-21 02:24:03');
 
 -- --------------------------------------------------------
 
@@ -103,6 +127,12 @@ INSERT INTO `torneos` (`id_torneo`, `nombre_torneo`, `lugar`, `fecha_torneo`) VA
 --
 
 --
+-- Indices de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  ADD PRIMARY KEY (`id_consulta`);
+
+--
 -- Indices de la tabla `luchadores`
 --
 ALTER TABLE `luchadores`
@@ -124,6 +154,11 @@ ALTER TABLE `torneos`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+--
+-- AUTO_INCREMENT de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  MODIFY `id_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `luchadores`
 --
