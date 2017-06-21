@@ -8,6 +8,7 @@ class ConfigApp{
         public static $ACTION_DELETE = 'borrar';
         public static $ACTION_MODIFY = 'modificar';
         public static $ACTION_VIEW = 'detalle';
+        public static $ACTION_ADMIN = 'admin';
         public static $RESOURCE_HOME = 'inicio';
         public static $RESOURCE_FIGHTERS = 'luchadores';
         public static $RESOURCE_TOURNAMENTS = 'torneos';

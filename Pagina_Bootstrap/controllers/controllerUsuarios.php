@@ -74,5 +74,10 @@ class ControllerUsuarios
       header('Location: ../inicio');
    }
   }
+
+  function consolaAdmin(){
+    //$consultas = $this->modelo->GetConsultas();
+    $this->vista->mostrarAdministracion("Administracion");
+  }
 }
 ?>

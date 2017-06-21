@@ -48,7 +48,9 @@
         break;
 
       case ConfigApp::$RESOURCE_USER:
-      if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGIN) {
+      if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_ADMIN) {
+        $controllerUsuarios->consolaAdmin();
+      }elseif (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGIN) {
         $controllerUsuarios->GetLogin();
       }else{
         $controllerUsuarios->ctrlVistaUsuarios();
