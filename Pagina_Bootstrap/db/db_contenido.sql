@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-06-2017 a las 08:35:17
+-- Tiempo de generación: 21-06-2017 a las 02:14:44
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -94,7 +94,9 @@ CREATE TABLE `torneos` (
 INSERT INTO `torneos` (`id_torneo`, `nombre_torneo`, `lugar`, `fecha_torneo`) VALUES
 (1, 'MMA Super super PRO ', 'Argentina', '2017-06-21 03:00:00'),
 (2, 'MMA Super super super PRO ', 'Argentina', '2017-06-29 03:00:00'),
-(3, 'MMA Super Ultra PRO ', 'Brasil', '2017-08-25 21:44:41');
+(3, 'MMA Super Ultra PRO ', 'Brasil', '2017-08-25 21:44:41'),
+(4, 'MMA Ultra Giga PRO ', 'Islas Malvinas', '2017-09-30 17:36:37'),
+(5, 'MMA Giga Tera PRO ', 'El Sol', '2020-01-02 02:59:59');
 
 --
 -- Índices para tablas volcadas
@@ -136,7 +138,7 @@ ALTER TABLE `noticias`
 -- AUTO_INCREMENT de la tabla `torneos`
 --
 ALTER TABLE `torneos`
-  MODIFY `id_torneo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_torneo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
