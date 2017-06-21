@@ -78,3 +78,4 @@
           </div>
       </div><!-- /.container -->
     </div>
+{include file="footer.tpl"}
