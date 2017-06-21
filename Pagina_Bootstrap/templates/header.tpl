@@ -72,15 +72,43 @@
                {/if}
               </ul>
               <ul class="nav navbar-nav navbar-right">
+              <li><p class="navbar-text">Ya tiene una cuenta?</p></li>
               <li class="dropdown">
-                <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Iniciar Sesion</a></li>
-                  <li><a href="#">Perfil</a></li>
-                  <li><a href="#">Cerrar Sesion</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Registro usuario</li>
-                  <li><a href="#">Registrarse</a></li>
+                <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar<span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu">
+                  <li>
+                    <div class="row">
+        							<div class="col-md-12">
+        								Entrar por
+        								<div class="social-buttons">
+        									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+        									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+        								</div>o
+        								 <form class="form" role="form" method="post" action="usuario/login" accept-charset="UTF-8" id="login-nav">
+        										<div class="form-group">
+        											 <label class="sr-only" for="inputUser">Email address</label>
+        											 <input type="email" class="form-control" name="user" id="inputUser" placeholder="Email address" required>
+        										</div>
+        										<div class="form-group">
+        											 <label class="sr-only" for="inputPassword">Password</label>
+        											 <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password" required>
+                              <div class="help-block text-right"><a href="">Olvido su contraseña ?</a></div>
+        										</div>
+        										<div class="form-group">
+        											 <button type="submit" class="btn btn-primary btn-block">Logearse</button>
+        										</div>
+        										<div class="checkbox">
+        											 <label>
+        											 <input type="checkbox"> Recordarme
+        											 </label>
+        										</div>
+        								 </form>
+        							</div>
+        							<div class="bottom text-center">
+        								Es Nuevo ? <a href="usuario/registro"><b>Unase</b></a>
+        							</div>
+        					 </div>
+                  </li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>

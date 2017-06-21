@@ -3,6 +3,7 @@
   require_once('controllers/controllerTorneos.php');
   require_once('controllers/controllerLuchadores.php');
   require_once('controllers/controllerConsultas.php');
+  require_once('controllers/controllerUsuarios.php');
   require_once('config/config_app.php');
 
   function parseUrl($url){
@@ -17,13 +18,15 @@
   $controllerTorneos = new ControllerTorneos();
   $controllerLuchadores = new ControllerLuchadores();
   $controllerConsultas = new ControllerConsultas();
+  $controllerUsuarios = new ControllerUsuarios();
 
   $datos = parseUrl($_GET[ConfigApp::$ACTION]);
 
-  if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST) || $_REQUEST[ConfigApp::$ACTION] == ConfigApp::$RESOURCE_HOME){
+  if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
     $controller->ctrlVistaNoticias();
   }
   else{
+    //TODO Queda mapear el ABM en una pagina de Administracion.
     switch ($datos[ConfigApp::$RESOURCE]) {
       case ConfigApp::$RESOURCE_HOME:
         $controller->ctrlVistaNoticias();
@@ -39,10 +42,20 @@
 
       case ConfigApp::$RESOURCE_QUERY:
         $controllerConsultas->ctrlVistaConsultas();
-        $accion = parseUrl($_GET[ConfigApp::$ACTION]);
-        if (isset($accion[ConfigApp::$ACTION])) {
+        if (isset($datos[ConfigApp::$ACTION])) {
           $controllerConsultas->InsertarConsulta();
         }
+        break;
+
+      case ConfigApp::$RESOURCE_USER:
+      if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGIN) {
+        $controllerUsuarios->GetLogin();
+      }else{
+        $controllerUsuarios->ctrlVistaUsuarios();
+        if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_REGISTER) {
+          $controllerUsuarios->InsertarUsuario();
+        }
+      }
         break;
 
       default:
@@ -50,22 +63,4 @@
         break;
     }
   }
-  /*if($datos[ConfigApp::$RESOURCE] === ConfigApp::$RESOURCE_NEWS) {
-      switch ($datos[ConfigApp::$ACTION] ) {
-        case ConfigApp::$ACTION_DELETE:
-          $controller->($datos[ConfigApp::$PARAMETERS]);
-          break;
-        case ConfigApp::$ACTION_ADD:
-          $controller->();
-          break;
-        case ConfigApp::$ACTION_VIEW:
-          $controller->($datos[ConfigApp::$PARAMETERS]);
-          break;
-        case ConfigApp::$ACTION_FINISHED:
-          $controller->($datos[ConfigApp::$PARAMETERS]);
-          break;
-        default:
-          echo "Error: Acción inválida";
-          break;
-        }*/
 ?>

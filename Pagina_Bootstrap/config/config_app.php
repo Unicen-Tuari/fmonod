@@ -3,6 +3,7 @@ class ConfigApp{
         public static $ACTION = 'action';
         public static $ACTION_LOGIN = 'login';
         public static $ACTION_LOGOUT = 'logout';
+        public static $ACTION_REGISTER = 'registro';
         public static $ACTION_ADD = 'agregar';
         public static $ACTION_DELETE = 'borrar';
         public static $ACTION_MODIFY = 'modificar';
