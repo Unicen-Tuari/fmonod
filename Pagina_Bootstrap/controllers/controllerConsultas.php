@@ -17,5 +17,21 @@ class ControllerConsultas
     //$consultas = $this->modelo->GetConsultas();
     $this->vista->mostrarContacto("Formulario de consultas");
   }
+
+  function InsertarConsulta(){
+    //Chequea que tenga un nombre
+    if(isset($_POST["name"]) && strlen(trim($_POST["name"])) > 0)
+    {
+      $nombre_apellido = $_POST["name"];
+      $email = $_POST["email"];
+      $texto = $_POST["consulta"];
+      $this->modelo->InsertarConsulta($nombre_apellido, $email,$texto);
+    }
+    else {
+      echo "ERROR: NO SE HA INSERTADO UN NOMBRE";
+    }
+    $this->ctrlVistaConsultas();
+    //header('Location: inicio');
+  }
 }
 ?>

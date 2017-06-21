@@ -58,19 +58,19 @@
              <img class="img-circle" src="images/torneo1.jpg" alt="Generic placeholder image" width="140" height="140">
              <h2>Torneo Importante</h2>
              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-             <p><a class="btn btn-default" href="torneos.php" role="button">Ver Detalles &raquo;</a></p>
+             <p><a class="btn btn-default" href="torneos" role="button">Ver Detalles &raquo;</a></p>
            </div><!-- /.col-lg-4 -->
            <div class="col-lg-4">
              <img class="img-circle" src="images/campeon1.jpg" alt="Generic placeholder image" width="140" height="140">
              <h2>Historia Campeon 1</h2>
              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-             <p><a class="btn btn-default" href="luchadores.php" role="button">Ver Detalles &raquo;</a></p>
+             <p><a class="btn btn-default" href="luchadores" role="button">Ver Detalles &raquo;</a></p>
            </div><!-- /.col-lg-4 -->
            <div class="col-lg-4">
              <img class="img-circle" src="images/comentarios.jpg" alt="Generic placeholder image" width="140" height="140">
              <h2>Donde comentar</h2>
              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-             <p><a class="btn btn-default" href="contacto.php" role="button">Ver Detalles &raquo;</a></p>
+             <p><a class="btn btn-default" href="contacto" role="button">Ver Detalles &raquo;</a></p>
            </div><!-- /.col-lg-4 -->
          </div><!-- /.row -->
 

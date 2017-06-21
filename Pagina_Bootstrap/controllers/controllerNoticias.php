@@ -19,7 +19,7 @@ class ControllerNoticias
     foreach ($noticias as $noticia) {
         $noticiasAMostrar[]= $noticia;
     }
-    $this->vista->mostrarNoticias("Torneos MMA", $noticiasAMostrar);
+    $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar);
   }
 }
 ?>

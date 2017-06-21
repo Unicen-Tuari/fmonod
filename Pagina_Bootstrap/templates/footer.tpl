@@ -1,7 +1,16 @@
 
     <!-- FOOTER -->
     <footer class="pull-footer">
-      <p><a href="#">Back to top</a></p>
+      {if $titulo == "Informacion Luchadores"}
+      <p><a href="luchadores">Back to top</a></p>
+      {else}
+      {if $titulo == "Fechas Torneos"}
+      <p><a href="torneos">Back to top</a></p>
+      {/if}
+      {if $titulo == "Formulario de consultas"}
+      <p><a href="contacto">Back to top</a></p>
+      {/if}
+      {/if}
       <p>&copy; 2017 Facundo Monod &middot; <a href="https://themes.getbootstrap.com/pages/privacy-policy" target="_blank">Privacy</a> &middot; <a href="https://themes.getbootstrap.com/pages/terms-of-service" target="_blank">Terms</a></p>
     </footer>
 

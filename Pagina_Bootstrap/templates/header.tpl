@@ -41,36 +41,46 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">MMA Championship</a>
+              <a class="navbar-brand" href="inicio">MMA Championship</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
-               {if $titulo == "Torneos MMA"}
-               <li class="active"><a href="#">Home</a></li>
-               <li><a href="torneos.php">Torneos</a></li>
-               <li><a href="luchadores.php">Luchadores</a></li>
-               <li><a href="contacto.php">Contacto</a></li>
+               {if $titulo == "Noticias MMA"}
+               <li class="active"><a href="inicio">Home</a></li>
+               <li><a href="torneos">Torneos</a></li>
+               <li><a href="luchadores">Luchadores</a></li>
+               <li><a href="contacto">Contacto</a></li>
                {else}
                {if $titulo == "Informacion Luchadores"}
-               <li><a href="#">Home</a></li>
-               <li><a href="torneos.php">Torneos</a></li>
-               <li class="active"><a href="luchadores.php">Luchadores</a></li>
-               <li><a href="contacto.php">Contacto</a></li>
+               <li><a href="inicio">Home</a></li>
+               <li><a href="torneos">Torneos</a></li>
+               <li class="active"><a href="luchadores">Luchadores</a></li>
+               <li><a href="contacto">Contacto</a></li>
                {/if}
                {if $titulo == "Fechas Torneos"}
-               <li><a href="#">Home</a></li>
-               <li class="active"><a href="torneos.php">Torneos</a></li>
-               <li><a href="luchadores.php">Luchadores</a></li>
-               <li><a href="contacto.php">Contacto</a></li>
+               <li><a href="inicio">Home</a></li>
+               <li class="active"><a href="torneos">Torneos</a></li>
+               <li><a href="luchadores">Luchadores</a></li>
+               <li><a href="contacto">Contacto</a></li>
                {/if}
                {if $titulo == "Formulario de consultas"}
-               <li><a href="#">Home</a></li>
-               <li><a href="torneos.php">Torneos</a></li>
-               <li><a href="luchadores.php">Luchadores</a></li>
-               <li class="active"><a href="contacto.php">Contacto</a></li>
+               <li><a href="inicio">Home</a></li>
+               <li><a href="torneos">Torneos</a></li>
+               <li><a href="luchadores">Luchadores</a></li>
+               <li class="active"><a href="contacto">Contacto</a></li>
                {/if}
                {/if}
-               <!--TODO Las redirecciones se haran desde el route cuando se implemente -->
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Iniciar Sesion</a></li>
+                  <li><a href="#">Perfil</a></li>
+                  <li><a href="#">Cerrar Sesion</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Registro usuario</li>
+                  <li><a href="#">Registrarse</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>

@@ -1,6 +1,6 @@
 <!-- FOOTER -->
   <footer class="index-footer">
-  <p><a href="#">Back to top</a></p>
+  <p><a href="inicio">Back to top</a></p>
   <p>&copy; 2017 Facundo Monod &middot; <a href="https://themes.getbootstrap.com/pages/privacy-policy" target="_blank">Privacy</a> &middot; <a href="https://themes.getbootstrap.com/pages/terms-of-service" target="_blank">Terms</a></p>
   </footer>
 
