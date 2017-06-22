@@ -1,0 +1,54 @@
+#regContainer{
+    margin-top: 3%;
+}
+.btn-register {
+    background-color: #17ae47;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+    color: #fff;
+    background-color: #1CA347;
+    border-color: #1CA347;
+}
+
+.fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url("../images/mma-reg.jpg");
+    background-repeat:repeat;
+  }
+
+.panel-heading a{
+    font-size: 48px;
+    color: rgb(6, 106, 117);
+    padding: 2px 0 10px 0;
+    font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+.panel-heading a{
+    background: -webkit-repeating-linear-gradient(-45deg,
+    rgb(18, 83, 93) ,
+    rgb(18, 83, 93) 20px,
+    rgb(64, 111, 118) 20px,
+    rgb(64, 111, 118) 40px,
+    rgb(18, 83, 93) 40px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
