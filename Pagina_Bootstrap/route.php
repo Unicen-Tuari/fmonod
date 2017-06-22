@@ -9,8 +9,9 @@
   function parseUrl($url){
     $arr_data = explode ("/",$url);
     $arrayReturn[ConfigApp::$RESOURCE] = $arr_data[0];
-    $arrayReturn[ConfigApp::$ACTION] = isset($arr_data[1]) ? $arr_data[1] : null;;
+    $arrayReturn[ConfigApp::$ACTION] = isset($arr_data[1]) ? $arr_data[1] : null;
     $arrayReturn[ConfigApp::$PARAMETERS] = isset($arr_data[2]) ? $arr_data[2] : null;
+    $arrayReturn[ConfigApp::$PARAMETERS2] = isset($arr_data[3]) ? $arr_data[3] : null;
     return $arrayReturn;
   }
 
@@ -29,6 +30,10 @@
     //TODO Queda mapear el ABM en una pagina de Administracion.
     switch ($datos[ConfigApp::$RESOURCE]) {
       case ConfigApp::$RESOURCE_HOME:
+        if ($datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_REGISTERED) {
+          $controller->ctrlVistaNoticias();
+          $controllerUsuarios->registerTrue();
+        }
         $controller->ctrlVistaNoticias();
         break;
 
@@ -48,14 +53,29 @@
         break;
 
       case ConfigApp::$RESOURCE_USER:
-      if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_ADMIN) {
-        $controllerUsuarios->consolaAdmin();
-      }elseif (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGIN) {
+      if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGIN) {
         $controllerUsuarios->GetLogin();
-      }else{
-        $controllerUsuarios->ctrlVistaUsuarios();
-        if (isset($datos[ConfigApp::$ACTION]) && $datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_REGISTER) {
-          $controllerUsuarios->InsertarUsuario();
+        header('Location: ../../inicio');
+
+      }
+      if ($datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_LOGOUT) {
+        $controllerUsuarios->LogOut();
+      }
+      if ($datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_ADMIN) {
+        session_start();
+        if (isset($_SESSION["username"]) && $_SESSION["loggedin"] == true && isset($_SESSION["admin"])) {
+          $controllerUsuarios->consolaAdmin();
+
+        }
+        else{
+          $controller->ctrlVistaNoticias();
+          $controllerUsuarios->adminError();
+        }
+      }
+      if ($datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_REGISTER) {
+      $controllerUsuarios->ctrlVistaUsuarios();
+        if ($datos[ConfigApp::$PARAMETERS] == ConfigApp::$PARAMETER_TRUE) {
+        $controllerUsuarios->InsertarUsuario();
         }
       }
         break;

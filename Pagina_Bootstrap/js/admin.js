@@ -11,3 +11,15 @@ $(function () {
   		$('.search-input').focus();
   	});
   });
+
+  $(document).ready(function(){
+    $("#modalRegister").modal('show');
+  });
+
+  $(document).ready(function(){
+		$("#modalError").modal('show');
+	});
+
+  $("#mn").hide();
+  $("#bn").hide();
+  $("#an").hide();

@@ -14,7 +14,6 @@ class ControllerUsuarios
   }
 
   function ctrlVistaUsuarios(){
-    //$consultas = $this->modelo->GetConsultas();
     $this->vista->mostrarRegistro("Registro");
   }
 
@@ -28,7 +27,7 @@ class ControllerUsuarios
       $hash = password_hash($password, PASSWORD_DEFAULT);
       if($password == $confirm){
       $this->modelo->InsertarUsuario($nombre_usuario, $hash);
-      header('Location: ../inicio');
+      header('Location: ../../inicio/registrado');
       die();
       }
       else{
@@ -45,39 +44,48 @@ class ControllerUsuarios
     $nombre_usuario = $_POST["user"];
     $password = $_POST["password"];
     if(isset($nombre_usuario) && isset($password)){
-      $datos = $this->modelo->GetLogin($nombre_usuario);
-      //var_dump($datos);
+    $datos = $this->modelo->GetLogin($nombre_usuario);
     $hash = $datos["password"];
-    if (password_verify($password, $hash)){
-     echo "Bienvenido ". $nombre_usuario;
-     session_start();
-     header('Location: ../inicio');
-     die();
-     }
+    $admin = $datos["administrador"];
+      if (password_verify($password, $hash)){
+       session_start();
+       $_SESSION['loggedin'] = true;
+       $_SESSION['username'] = $nombre_usuario;
+       $_SESSION['admin'] = $admin;
+       session_write_close();
+       }
      else
      echo "Credenciales invalidas";
     }
+    else {
+      header('Location: ../inicio');
+    }
   }
 
-  function SessionCheck(){
+  function checkearSesion(){
   session_start();
-  $user_check = $_SESSION['user'];
-  if(!isset($_SESSION['user'])){
+  $user_check = $_SESSION['username'];
+  if(!isset($user_check)){
       header('Location: ../inicio');
    }
   }
 
   function LogOut(){
     session_start();
+    session_destroy();
+    header('Location: ../inicio');
+  }
 
-   if(session_destroy()) {
-      header('Location: ../inicio');
-   }
+  function adminError(){
+    $this->vista->mostrarAdminError();
   }
 
   function consolaAdmin(){
-    //$consultas = $this->modelo->GetConsultas();
     $this->vista->mostrarAdministracion("Administracion");
+  }
+  
+  function registerTrue(){
+    $this->vista->mostrarRegisterTrue();
   }
 }
 ?>

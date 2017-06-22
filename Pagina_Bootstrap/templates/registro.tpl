@@ -48,7 +48,7 @@
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-lg-12">
-                        <form id="register-form" action="usuario/registro" method="post" role="form">
+                        <form id="register-form" action="usuario/registro/true" method="post" role="form">
                           <div class="form-group">
                             <label for="username">Usuario</label>
                             <input type="email" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">

@@ -19,7 +19,25 @@ class ControllerNoticias
     foreach ($noticias as $noticia) {
         $noticiasAMostrar[]= $noticia;
     }
-    $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar);
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+        //print_r($_SESSION);
+        if ($_SESSION == null) {
+          $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0);
+        }
+        else{
+        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+        }
+    }
+    else {
+      //print_r($_SESSION);
+      if ($_SESSION == null) {
+        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0);
+      }
+      else{
+      $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+      }
+    }
   }
 }
 ?>

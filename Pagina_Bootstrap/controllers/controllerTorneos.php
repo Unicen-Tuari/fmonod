@@ -19,7 +19,13 @@ class ControllerTorneos
     foreach ($torneos as $torneo) {
         $torneosAMostrar[]= $torneo;
     }
-    $this->vista->mostrarTorneos("Fechas Torneos", $torneosAMostrar);
+    session_start();
+    if ($_SESSION == null) {
+    $this->vista->mostrarTorneos("Fechas Torneos", $torneosAMostrar,0,0);
+    }
+    else{
+    $this->vista->mostrarTorneos("Fechas Torneos", $torneosAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+    }
   }
 }
 ?>

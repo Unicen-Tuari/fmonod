@@ -28,5 +28,17 @@ class ViewUsuarios
     $this->smarty->display('admin.tpl');
   }
 
+  function mostrarAdminError(){
+    $this->smarty->assign("baseDir", $this->baseDir);
+
+    $this->smarty->display('adminError.tpl');
+  }
+
+  function mostrarRegisterTrue(){
+    $this->smarty->assign("baseDir", $this->baseDir);
+
+    $this->smarty->display('registerTrue.tpl');
+  }
+
 }
 ?>

@@ -72,6 +72,10 @@
                {/if}
               </ul>
               <ul class="nav navbar-nav navbar-right">
+              {if $login == 1}
+              <li><p class="navbar-text">Usuario {$username}</p></li>
+              <li><a href="usuario/logout">Salir</a></li>
+              {else}
               <li><p class="navbar-text">Ya tiene una cuenta?</p></li>
               <li class="dropdown">
                 <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar<span class="caret"></span></a>
@@ -84,7 +88,7 @@
         									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
         									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
         								</div>o
-        								 <form class="form" role="form" method="post" action="usuario/login" accept-charset="UTF-8" id="login-nav">
+        								 <form class="form" role="form" method="post" action="usuario/login/true" accept-charset="UTF-8" id="login-nav">
         										<div class="form-group">
         											 <label class="sr-only" for="inputUser">Email address</label>
         											 <input type="email" class="form-control" name="user" id="inputUser" placeholder="Email address" required>
@@ -109,6 +113,7 @@
         							</div>
         					 </div>
                   </li>
+                  {/if}
               </ul>
             </div><!--/.nav-collapse -->
           </div>

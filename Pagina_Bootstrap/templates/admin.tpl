@@ -42,7 +42,7 @@
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     			</button>
-    			<a class="navbar-brand" href="#">
+    			<a class="navbar-brand" href="usuario/admin">
     				Administracion
     			</a>
     		</div>
@@ -56,7 +56,7 @@
     				<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
     			</form>
     			<ul class="nav navbar-nav navbar-right">
-    				<li class="dropdown ">
+    				<li class="dropdown">
     					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     						Cuenta
     						<span class="caret"></span></a>
@@ -65,7 +65,7 @@
     							<li class=""><a href="#">Perfil</a></li>
     							<li class=""><a href="#">Estadisticas</a></li>
     							<li class="divider"></li>
-    							<li><a href="#">Salir</a></li>
+    							<li><a href="usuario/logout">Salir</a></li>
     						</ul>
     					</li>
     				</ul>
@@ -82,7 +82,7 @@
     			<!-- Main Menu -->
     			<div class="side-menu-container">
     				<ul class="nav navbar-nav">
-    					<li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Tablero</a></li>
+    					<li class="active"><a href="usuario/admin"><span class="glyphicon glyphicon-dashboard"></span> Tablero</a></li>
 
     					<!-- Dropdown-->
     					<li class="panel panel-default" id="dropdown">
@@ -106,9 +106,9 @@
     										<div id="dropdown-lvl2" class="panel-collapse collapse">
     											<div class="panel-body">
     												<ul class="nav navbar-nav">
-    													<li><a href="#">Setear Usuario Administrador</a></li>
-    													<li><a href="#">Setear Usuario Moderador</a></li>
-    													<li><a href="#">Quitar Permisos</a></li>
+    													<li><a href="usuario/admin">Setear Usuario Administrador</a></li>
+    													<li><a href="usuario/admin">Setear Usuario Moderador</a></li>
+    													<li><a href="usuario/admin">Quitar Permisos</a></li>
     												</ul>
     											</div>
     										</div>
@@ -127,9 +127,9 @@
     						<div id="dropdown-noticias" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="#">Agregar Noticia</a></li>
-    									<li><a href="#">Modificar Noticia</a></li>
-    									<li><a href="#">Borrar Noticia</a></li>
+    									<li><a href="usuario/admin/noticias/agregar">Agregar Noticia</a></li>
+    									<li name="modnoticia"><a href="usuario/admin/noticias/modificar">Modificar Noticia</a></li>
+    									<li><a href="usuario/admin/noticias/borrar">Borrar Noticia</a></li>
     								</ul>
     							</div>
     						</div>
@@ -145,9 +145,9 @@
     						<div id="dropdown-torneos" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="#">Agregar Torneo</a></li>
-    									<li><a href="#">Modificar Torneo</a></li>
-    									<li><a href="#">Borrar Torneo</a></li>
+                      <li><a href="usuario/admin/torneos/agregar">Agregar Torneo</a></li>
+    									<li><a href="usuario/admin/torneos/modificar">Modificar Torneo</a></li>
+    									<li><a href="usuario/admin/torneos/borrar">Borrar Torneo</a></li>
     								</ul>
     							</div>
     						</div>
@@ -162,9 +162,9 @@
     						<div id="dropdown-luchadores" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="#">Agregar Luchador</a></li>
-    									<li><a href="#">Modificar Luchador</a></li>
-    									<li><a href="#">Borrar Luchador</a></li>
+                      <li><a href="usuario/admin/luchadores/agregar">Agregar Luchador</a></li>
+    									<li><a href="usuario/admin/luchadores/modificar">Modificar Luchador</a></li>
+    									<li><a href="usuario/admin/luchadores/borrar">Borrar Luchador</a></li>
     								</ul>
     							</div>
     						</div>
@@ -189,7 +189,219 @@
     		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     	</div>
     </div>
-      		</div>
+  </div>
+  <div class="col-md-10 content" id="mn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Modificar Noticia
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Noticia</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo (Muted)</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Detalle</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Imagen</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Autor</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-primary">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="bn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Borrar Noticia
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Noticia</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo (Muted)</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Detalle</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Imagen</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Autor</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-warning">
+        <span class="glyphicon glyphicon-trash"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="an">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Agregar Noticia
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Titulo (Muted)</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Detalle</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Imagen</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Autor</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-success">
+        <span class="glyphicon glyphicon-upload"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+
 
 
     <!-- Bootstrap core JavaScript

@@ -14,8 +14,14 @@ class ControllerConsultas
   }
 
   function ctrlVistaConsultas(){
-    //$consultas = $this->modelo->GetConsultas();
-    $this->vista->mostrarContacto("Formulario de consultas");
+    session_start();
+    if ($_SESSION == null) {
+    $this->vista->mostrarContacto("Formulario de consultas",0,0);
+    }
+    else{
+    $this->vista->mostrarContacto("Formulario de consultas",$_SESSION['loggedin'],$_SESSION['username']);
+    }
+
   }
 
   function InsertarConsulta(){
