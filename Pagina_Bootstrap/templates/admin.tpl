@@ -62,8 +62,8 @@
     						<span class="caret"></span></a>
     						<ul class="dropdown-menu" role="menu">
     							<li class="dropdown-header">Herramientas</li>
-    							<li class=""><a href="#">Perfil</a></li>
-    							<li class=""><a href="#">Estadisticas</a></li>
+    							<li class=""><a href="usuario/admin">Perfil</a></li>
+    							<li class=""><a href="usuario/admin">Estadisticas</a></li>
     							<li class="divider"></li>
     							<li><a href="usuario/logout">Salir</a></li>
     						</ul>
@@ -94,9 +94,9 @@
     						<div id="dropdown-lvl1" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="#">Agregar Usuario</a></li>
-    									<li><a href="#">Modificar Usuario</a></li>
-    									<li><a href="#">Borrar Usuario</a></li>
+    									<li><a href="usuario/admin/agregar/usuario">Agregar Usuario</a></li>
+    									<li><a href="usuario/admin/modificar/usuario">Modificar Usuario</a></li>
+    									<li><a href="usuario/admin/borrar/usuario">Borrar Usuario</a></li>
 
     									<!-- Dropdown level 2 -->
     									<li class="panel panel-default" id="dropdown">
@@ -127,9 +127,9 @@
     						<div id="dropdown-noticias" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="usuario/admin/noticias/agregar">Agregar Noticia</a></li>
-    									<li name="modnoticia"><a href="usuario/admin/noticias/modificar">Modificar Noticia</a></li>
-    									<li><a href="usuario/admin/noticias/borrar">Borrar Noticia</a></li>
+    									<li><a href="usuario/admin/agregar/noticias">Agregar Noticia</a></li>
+    									<li><a href="usuario/admin/modificar/noticias">Modificar Noticia</a></li>
+    									<li><a href="usuario/admin/borrar/noticias">Borrar Noticia</a></li>
     								</ul>
     							</div>
     						</div>
@@ -145,9 +145,9 @@
     						<div id="dropdown-torneos" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="usuario/admin/torneos/agregar">Agregar Torneo</a></li>
-    									<li><a href="usuario/admin/torneos/modificar">Modificar Torneo</a></li>
-    									<li><a href="usuario/admin/torneos/borrar">Borrar Torneo</a></li>
+                      <li><a href="usuario/admin/agregar/torneos">Agregar Torneo</a></li>
+    									<li><a href="usuario/admin/modificar/torneos">Modificar Torneo</a></li>
+    									<li><a href="usuario/admin/borrar/torneos">Borrar Torneo</a></li>
     								</ul>
     							</div>
     						</div>
@@ -162,9 +162,9 @@
     						<div id="dropdown-luchadores" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="usuario/admin/luchadores/agregar">Agregar Luchador</a></li>
-    									<li><a href="usuario/admin/luchadores/modificar">Modificar Luchador</a></li>
-    									<li><a href="usuario/admin/luchadores/borrar">Borrar Luchador</a></li>
+                      <li><a href="usuario/admin/agregar/luchadores">Agregar Luchador</a></li>
+    									<li><a href="usuario/admin/modificar/luchadores">Modificar Luchador</a></li>
+    									<li><a href="usuario/admin/borrar/luchadores">Borrar Luchador</a></li>
     								</ul>
     							</div>
     						</div>
@@ -388,6 +388,606 @@
         <div class="col-lg-6">
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon3">Autor</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-success">
+        <span class="glyphicon glyphicon-upload"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="mn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Modificar Torneo
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Torneo</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Torneo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Lugar</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Fecha</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-primary">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="bn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Borrar Torneo
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Torneo</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Torneo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Lugar</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Fecha</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-warning">
+        <span class="glyphicon glyphicon-trash"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="an">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Agregar Torneo
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Torneo</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Lugar</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Fecha</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-success">
+        <span class="glyphicon glyphicon-upload"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="mn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Modificar Luchador
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Luchador</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Apellido</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Edad</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Categoria</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Pais</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Historia</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Link</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Torneos Ganados</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-primary">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="bn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Borrar Luchador
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Luchador</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Apellido</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Edad</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Categoria</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Pais</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Historia</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Link</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Torneos Ganados</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-warning">
+        <span class="glyphicon glyphicon-trash"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="an">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Agregar Luchador
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Apellido</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Edad</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Categoria</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Pais</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Historia</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Link</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Torneos Ganados</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-success">
+        <span class="glyphicon glyphicon-upload"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="mn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Modificar Usuario
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Usuario</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Contraseña</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Administrador</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-primary">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="bn">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Borrar Usuario
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">ID Usuario</span>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Contraseña</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Administrador</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <a href="usuario/admin" class="btn btn-warning">
+        <span class="glyphicon glyphicon-trash"></span>
+      </a>
+      <a href="usuario/admin" class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10 content" id="an">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Agregar Usuario
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Contraseña</span>
+            <input type="text" class="form-control" aria-label="...">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <p><!-- Divider --></p>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Administrador</span>
             <input type="text" class="form-control" aria-label="...">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->

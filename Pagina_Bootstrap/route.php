@@ -65,7 +65,83 @@
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["loggedin"] == true && isset($_SESSION["admin"])) {
           $controllerUsuarios->consolaAdmin();
+          switch ($datos[ConfigApp::$PARAMETERS]) {
+            case ConfigApp::$ACTION_ADD:
+              switch ($datos[ConfigApp::$PARAMETERS2]) {
+                case ConfigApp::$RESOURCE_USER::
+                  $controllerUsuarios->agregarUsuario();
+                  break;
 
+                case ConfigApp::$RESOURCE_NEWS::
+                  $controller->agregarNoticia();
+                  break;
+
+                case ConfigApp::$RESOURCE_TOURNAMENTS::
+                  $controllerTorneos->agregarTorneo();
+                  break;
+
+                case ConfigApp::$RESOURCE_FIGHTERS::
+                  $controllerLuchadores->agregarLuchador();
+                  break;
+
+                default:
+                  # code...
+                  break;
+              }
+              break;
+
+            case ConfigApp::$ACTION_MODIFY:
+              switch ($datos[ConfigApp::$PARAMETERS2]) {
+                case ConfigApp::$RESOURCE_USER::
+                  $controllerUsuarios->modificarUsuario();
+                  break;
+
+                case ConfigApp::$RESOURCE_NEWS::
+                  $controller->modificarNoticia();
+                  break;
+
+                case ConfigApp::$RESOURCE_TOURNAMENTS::
+                  $controllerTorneos->modificarTorneo();
+                  break;
+
+                case ConfigApp::$RESOURCE_FIGHTERS::
+                  $controllerLuchadores->modificarLuchador();
+                  break;
+
+                default:
+                  # code...
+                  break;
+              }
+              break;
+
+            case ConfigApp::$ACTION_DELETE:
+              switch ($datos[ConfigApp::$PARAMETERS2]) {
+                case ConfigApp::$RESOURCE_USER::
+                  $controllerUsuarios->borrarUsuario();
+                  break;
+
+                case ConfigApp::$RESOURCE_NEWS::
+                  $controller->borrarNoticia();
+                  break;
+
+                case ConfigApp::$RESOURCE_TOURNAMENTS::
+                  $controllerTorneos->borrarTorneo();
+                  break;
+
+                case ConfigApp::$RESOURCE_FIGHTERS::
+                  $controllerLuchadores->borrarLuchador();
+                  break;
+
+                default:
+                  # code...
+                  break;
+              }
+              break;
+
+            default:
+             # $controllerUsuarios->consolaAdmin();
+              break;
+          }
         }
         else{
           $controller->ctrlVistaNoticias();

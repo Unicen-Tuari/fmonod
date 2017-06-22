@@ -20,6 +20,6 @@ $(function () {
 		$("#modalError").modal('show');
 	});
 
-  $("#mn").hide();
-  $("#bn").hide();
-  $("#an").hide();
+  //$("#mn").hide();
+  //$("#bn").hide();
+  //$("#an").hide();
