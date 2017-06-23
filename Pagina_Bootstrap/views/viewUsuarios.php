@@ -37,6 +37,7 @@ class ViewUsuarios
   function mostrarAdministracion($titulo){
     $this->smarty->assign("titulo", $titulo);
     $this->smarty->assign("baseDir", $this->baseDir);
+    //$this->smarty->caching = true;
 
     $this->smarty->display('admin.tpl');
   }
@@ -53,5 +54,12 @@ class ViewUsuarios
     $this->smarty->display('registerTrue.tpl');
   }
 
+  function cargarVista($datos){
+    $this->smarty->assign("datos", $datos);
+    $this->smarty->assign("baseDir", $this->baseDir);
+    //$this->smarty->debugging = true;
+
+    $this->smarty->display('adminContent.tpl');
+  }
 }
 ?>

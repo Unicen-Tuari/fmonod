@@ -97,9 +97,6 @@ class ControllerUsuarios
   }
 
   function modificarUsuario(){
-    $usuarios = array();
-    $usuarios = $this->getUsuarios();
-    $this->vista->mostrarAdministracionDatos("Administracion",$usuarios);
     $nombre_usuario = $_POST["username"];
     $password = $_POST["pass"];
     $admin = (isset($_POST["administrator"])) ? $_POST["administrator"] : null ;
@@ -118,6 +115,12 @@ class ControllerUsuarios
         $usuarios[]= $dato;
     }
     return $usuarios;
+  }
+
+  function cargarUsuariosVista(){
+    $usuarios = $this->getUsuarios();
+    //password_verify($password, $usuarios['password']);
+    $this->vista->cargarVista($usuarios);
   }
 }
 ?>

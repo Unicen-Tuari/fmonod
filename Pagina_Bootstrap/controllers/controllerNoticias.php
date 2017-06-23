@@ -23,19 +23,19 @@ class ControllerNoticias
         session_start();
         //print_r($_SESSION);
         if ($_SESSION == null) {
-          $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0);
+          $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0,0);
         }
         else{
-        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username'],$_SESSION['admin']);
         }
     }
     else {
       //print_r($_SESSION);
       if ($_SESSION == null) {
-        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0);
+        $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,0,0,0);
       }
       else{
-      $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+      $this->vista->mostrarNoticias("Noticias MMA", $noticiasAMostrar,$_SESSION['loggedin'],$_SESSION['username'],$_SESSION['admin']);
       }
     }
   }

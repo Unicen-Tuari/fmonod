@@ -97,7 +97,7 @@
             break;
 
           case ConfigApp::$ACTION_MODIFY:
-          $controllerUsuarios->getUsuarios();
+          $controllerUsuarios->cargarUsuariosVista();
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
                 $controllerUsuarios->modificarUsuario();

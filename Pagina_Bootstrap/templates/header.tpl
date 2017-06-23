@@ -73,8 +73,21 @@
               </ul>
               <ul class="nav navbar-nav navbar-right">
               {if $login == 1}
+                {if $admin == 1}
+              <li><p class="navbar-text">Usuario {$username}</p></li>
+              <li class="dropdown">
+                <a href="./" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="admin/">Administrador</a></li>
+                  <li><a href="usuario/logout">Salir</a></li>
+                </ul>
+                {/if}
+              {/if}
+              {if $login == 1}
+                {if $admin == 0}
               <li><p class="navbar-text">Usuario {$username}</p></li>
               <li><a href="usuario/logout">Salir</a></li>
+              {/if}
               {else}
               <li><p class="navbar-text">Ya tiene una cuenta?</p></li>
               <li class="dropdown">
