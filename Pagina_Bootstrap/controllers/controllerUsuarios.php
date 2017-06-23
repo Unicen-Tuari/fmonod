@@ -83,9 +83,41 @@ class ControllerUsuarios
   function consolaAdmin(){
     $this->vista->mostrarAdministracion("Administracion");
   }
-  
+
   function registerTrue(){
     $this->vista->mostrarRegisterTrue();
+  }
+
+  function agregarUsuario(){
+    $nombre_usuario = $_POST["username"];
+    $password = $_POST["pass"];
+    $admin = (isset($_POST["administrator"])) ? $_POST["administrator"] : null ;
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $this->modelo->InsertarUsuarioAdmin($nombre_usuario,$hash,$admin);
+  }
+
+  function modificarUsuario(){
+    $usuarios = array();
+    $usuarios = $this->getUsuarios();
+    $this->vista->mostrarAdministracionDatos("Administracion",$usuarios);
+    $nombre_usuario = $_POST["username"];
+    $password = $_POST["pass"];
+    $admin = (isset($_POST["administrator"])) ? $_POST["administrator"] : null ;
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $this->modelo->ModificarUsuario($_POST["id_usuario"],$nombre_usuario,$hash,$admin);
+  }
+
+  function borrarUsuario(){
+    $this->vista->mostrarRegisterTrue();
+  }
+
+  function getUsuarios(){
+    $datos = $this->modelo->GetUsuarios();
+    $usuarios = array();
+    foreach ($datos as $dato) {
+        $usuarios[]= $dato;
+    }
+    return $usuarios;
   }
 }
 ?>

@@ -21,6 +21,19 @@ class ViewUsuarios
     $this->smarty->display('registro.tpl');
   }
 
+  function mostrarAdministracionDatos($titulo,$datos){
+    if (!isset($datos)) {
+      $this->mostrarAdministracion($titulo);
+    }
+    else {
+      $this->smarty->assign("titulo", $titulo);
+      $this->smarty->assign("datos", $datos);
+      $this->smarty->assign("baseDir", $this->baseDir);
+
+      $this->smarty->display('adminContent.tpl');
+    }
+  }
+
   function mostrarAdministracion($titulo){
     $this->smarty->assign("titulo", $titulo);
     $this->smarty->assign("baseDir", $this->baseDir);

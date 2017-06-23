@@ -24,6 +24,14 @@ class ModelUsuarios
     //var_dump($consulta->errorInfo());
   }
 
+  function InsertarUsuarioAdmin($nombre_usuario, $password, $admin)
+  {
+    $consulta = $this->db->prepare("INSERT INTO usuarios (nombre_usuario, password, administrador) ".
+                "VALUES (?,?,?)");
+    $result = $consulta->execute(array($nombre_usuario, $password, $admin));
+    //var_dump($consulta->errorInfo());
+  }
+
   function BorrarUsuario($id_usuario)
   {
     $sentencia = $this->db->prepare("DELETE FROM usuarios WHERE id_usuario = ?");
@@ -35,6 +43,12 @@ class ModelUsuarios
     $consulta = $this->db->prepare("SELECT * FROM usuarios WHERE id_usuario = ?");
     $result = $consulta->execute(array($id_usuario));
     return $consulta->fetch();
+  }
+
+  function ModificarUsuario($id_usuario,$nombre_usuario, $password, $admin)
+  {
+    $sentencia = $this->db->prepare("UPDATE usuarios SET nombre_usuario=?,password=?, administrador=? WHERE id_usuario=?");
+    $sentencia->execute(array($nombre_usuario, $password, $admin,$id_usuario));
   }
 
   function GetLogin($nombre_usuario)

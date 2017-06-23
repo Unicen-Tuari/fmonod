@@ -28,5 +28,17 @@ class ControllerLuchadores
     }
   }
 
+  function agregarLuchador(){
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $edad = $_POST["edad"];
+    $categoria = $_POST["categoria"];
+    $pais = $_POST["pais"];
+    $historia = $_POST["historia"];
+    $link= $_POST["link"];
+    $torneos_ganados = $_POST["torneos_ganados"];
+    $this->modelo->InsertarLuchador($nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados);
+  }
+
 }
 ?>

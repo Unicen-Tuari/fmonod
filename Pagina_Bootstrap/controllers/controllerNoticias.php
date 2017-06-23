@@ -39,5 +39,14 @@ class ControllerNoticias
       }
     }
   }
+
+  function agregarNoticia(){
+    $titulo = $_POST["titulo"];
+    $titulo_muted = $_POST["titulo_muted"];
+    $detalle = $_POST["detalle"];
+    $autor = $_POST["autor"];
+    $imagen = $_POST["imagen"];
+    $this->modelo->InsertarNoticia($titulo,$titulo_muted,$detalle,$autor,$imagen);
+  }
 }
 ?>

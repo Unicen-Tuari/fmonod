@@ -27,5 +27,12 @@ class ControllerTorneos
     $this->vista->mostrarTorneos("Fechas Torneos", $torneosAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
     }
   }
+
+  function agregarTorneo(){
+    $nombre_torneo = $_POST["nombre_torneo"];
+    $lugar = $_POST["lugar"];
+    $fecha_torneo = $_POST["fecha_torneo"];
+    $this->modelo->InsertarTorneo($nombre_torneo,$lugar,$fecha_torneo);
+  }
 }
 ?>
