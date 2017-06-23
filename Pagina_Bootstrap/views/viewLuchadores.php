@@ -24,5 +24,12 @@ class ViewLuchadores
     $this->smarty->display('list-luchadores.tpl');
   }
 
+  function cargarVista($datos){
+    $this->smarty->assign("datos", $datos);
+    $this->smarty->assign("baseDir", $this->baseDir);
+    //$this->smarty->debugging = true;
+
+    $this->smarty->display('adminContent.tpl');
+  }
 }
 ?>

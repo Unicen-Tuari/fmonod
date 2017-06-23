@@ -105,7 +105,8 @@ class ControllerUsuarios
   }
 
   function borrarUsuario(){
-    $this->vista->mostrarRegisterTrue();
+    $id_usuario = $_POST["id_usuario"];
+    $this->modelo->BorrarUsuario($id_usuario);
   }
 
   function getUsuarios(){
@@ -119,7 +120,7 @@ class ControllerUsuarios
 
   function cargarUsuariosVista(){
     $usuarios = $this->getUsuarios();
-    //password_verify($password, $usuarios['password']);
+    //print_r($usuarios);
     $this->vista->cargarVista($usuarios);
   }
 }

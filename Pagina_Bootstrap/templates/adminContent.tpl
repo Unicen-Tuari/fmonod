@@ -1,19 +1,3 @@
-<div class="col-md-10 content collapse in" id="tab">
-  <div class="panel panel-default">
-  <div class="panel-heading">
-    Tablero
-  </div>
-  <div class="panel-body">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-</div>
-</div>
-
 <div class="col-md-10 content collapse" id="mn">
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -83,11 +67,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para modificar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-primary" type="submit">
     <span class="glyphicon glyphicon-ok"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/modificar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -162,11 +152,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para borrar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-warning" type="submit">
     <span class="glyphicon glyphicon-trash"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/borrar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -284,11 +280,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
-  <button class="btn btn-success" type="submit">
+  <div class="panel-body">
+    Para modificar, cargue los datos con el boton celeste.
+  </div>
+  <button class="btn btn-primary" type="submit">
     <span class="glyphicon glyphicon-ok"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/modificar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -344,11 +346,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para borrar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-warning" type="submit">
     <span class="glyphicon glyphicon-trash"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/borrar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -493,11 +501,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para modificar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-primary" type="submit">
     <span class="glyphicon glyphicon-ok"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/modificar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -599,11 +613,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para borrar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-warning" type="submit">
     <span class="glyphicon glyphicon-trash"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/borrar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -712,7 +732,9 @@
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
           <ul class="dropdown-menu">
             {foreach $datos as $dato}
-            <li><a name="id_usuario">{$datos.id_usuario}</a></li>
+              {foreach $dato as $datox}
+            <li><a name="id_usuario">{$datox.id_usuario}</a></li>
+              {/foreach}
             {/foreach}
           </ul>
         </div><!-- /btn-group -->
@@ -724,7 +746,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
-        <input type="email" class="form-control" aria-label="..." name="username">
+        <input type="email" class="form-control" aria-label="..." name="username" value="{$datos[id_usuario].nombre_usuario}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -733,7 +755,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" >Contraseña</span>
-        <input type="password" class="form-control" aria-label="..." name="pass">
+        <input type="password" class="form-control" aria-label="..." name="pass" value="{$datos[id_usuario].password}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -741,17 +763,23 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3" name="administrator">Administrador</span>
+        <span class="input-group-addon" id="basic-addon3" name="administrator" value="{$datos[id_usuario].administrador}">Administrador</span>
         <input type="text" class="form-control" aria-label="...">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para modificar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-primary" type="submit">
     <span class="glyphicon glyphicon-ok"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/modificar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>
@@ -807,11 +835,17 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  <div class="panel-body">
+    Para borrar, cargue los datos con el boton celeste.
+  </div>
   <button class="btn btn-warning" type="submit">
     <span class="glyphicon glyphicon-trash"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
+  </a>
+  <a href="admin/borrar" class="btn btn-info">
+    <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
 </div>

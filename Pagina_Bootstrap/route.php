@@ -26,7 +26,6 @@
     $controller->ctrlVistaNoticias();
   }
   else{
-    //TODO Queda mapear el ABM en una pagina de Administracion.
     switch ($datos[ConfigApp::$RESOURCE]) {
       case ConfigApp::$RESOURCE_HOME:
         if ($datos[ConfigApp::$ACTION] == ConfigApp::$ACTION_REGISTERED) {
@@ -97,6 +96,9 @@
             break;
 
           case ConfigApp::$ACTION_MODIFY:
+          $controller->cargarNoticiasVista();
+          $controllerLuchadores->cargarLuchadoresVista();
+          $controllerTorneos->cargarTorneosVista();
           $controllerUsuarios->cargarUsuariosVista();
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
@@ -121,6 +123,10 @@
             break;
 
           case ConfigApp::$ACTION_DELETE:
+          $controller->cargarNoticiasVista();
+          $controllerLuchadores->cargarLuchadoresVista();
+          $controllerTorneos->cargarTorneosVista();
+          $controllerUsuarios->cargarUsuariosVista();
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
                 $controllerUsuarios->borrarUsuario();

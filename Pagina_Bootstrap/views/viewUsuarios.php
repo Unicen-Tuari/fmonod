@@ -38,6 +38,7 @@ class ViewUsuarios
     $this->smarty->assign("titulo", $titulo);
     $this->smarty->assign("baseDir", $this->baseDir);
     //$this->smarty->caching = true;
+    //$this->smarty->cache_lifetime = 30;
 
     $this->smarty->display('admin.tpl');
   }
