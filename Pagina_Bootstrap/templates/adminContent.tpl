@@ -1,4 +1,4 @@
-<div class="col-md-10 content">
+<div class="col-md-10 content collapse in" id="tab">
   <div class="panel panel-default">
   <div class="panel-heading">
     Tablero
@@ -14,7 +14,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="mn">
+<div class="col-md-10 content collapse" id="mn">
 <div class="panel panel-default">
   <div class="panel-heading">
     Modificar Noticia
@@ -93,7 +93,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="bn">
+<div class="col-md-10 content collapse" id="bn">
 <div class="panel panel-default">
   <div class="panel-heading">
     Borrar Noticia
@@ -172,7 +172,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="an">
+<div class="col-md-10 content collapse" id="an">
 <div class="panel panel-default">
   <div class="panel-heading">
     Agregar Noticia
@@ -234,7 +234,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="mn">
+<div class="col-md-10 content collapse" id="mt">
 <div class="panel panel-default">
   <div class="panel-heading">
     Modificar Torneo
@@ -294,7 +294,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="bn">
+<div class="col-md-10 content collapse" id="bt">
 <div class="panel panel-default">
   <div class="panel-heading">
     Borrar Torneo
@@ -354,7 +354,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="an">
+<div class="col-md-10 content collapse" id="at">
 <div class="panel panel-default">
   <div class="panel-heading">
     Agregar Torneo
@@ -397,7 +397,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="mn">
+<div class="col-md-10 content collapse" id="ml">
 <div class="panel panel-default">
   <div class="panel-heading">
     Modificar Luchador
@@ -503,7 +503,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="bn">
+<div class="col-md-10 content collapse" id="bl">
 <div class="panel panel-default">
   <div class="panel-heading">
     Borrar Luchador
@@ -609,7 +609,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="an">
+<div class="col-md-10 content collapse" id="al">
 <div class="panel panel-default">
   <div class="panel-heading">
     Agregar Luchador
@@ -698,7 +698,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="mn">
+<div class="col-md-10 content collapse" id="mu">
 <div class="panel panel-default">
   <div class="panel-heading">
     Modificar Usuario
@@ -757,7 +757,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="bn">
+<div class="col-md-10 content collapse" id="bu">
 <div class="panel panel-default">
   <div class="panel-heading">
     Borrar Usuario
@@ -817,7 +817,7 @@
 </div>
 </div>
 
-<div class="col-md-10 content" id="an">
+<div class="col-md-10 content collapse" id="au">
 <div class="panel panel-default">
   <div class="panel-heading">
     Agregar Usuario

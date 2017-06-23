@@ -82,7 +82,7 @@
     			<!-- Main Menu -->
     			<div class="side-menu-container">
     				<ul class="nav navbar-nav">
-    					<li class="active"><a href="admin/"><span class="glyphicon glyphicon-dashboard"></span> Tablero</a></li>
+    					<li class="active"><a href="#tab" data-toggle="collapse"><span class="glyphicon glyphicon-dashboard"></span> Tablero</a></li>
 
     					<!-- Dropdown-->
     					<li class="panel panel-default" id="dropdown">
@@ -94,9 +94,9 @@
     						<div id="dropdown-lvl1" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="admin/agregar">Agregar Usuario</a></li>
-    									<li><a href="admin/modificar">Modificar Usuario</a></li>
-    									<li><a href="admin/borrar">Borrar Usuario</a></li>
+    									<li><a href="#au" data-toggle="collapse">Agregar Usuario</a></li>
+    									<li><a href="#mu" data-toggle="collapse">Modificar Usuario</a></li>
+    									<li><a href="#bu" data-toggle="collapse">Borrar Usuario</a></li>
 
     									<!-- Dropdown level 2 -->
     									<li class="panel panel-default" id="dropdown">
@@ -127,9 +127,9 @@
     						<div id="dropdown-noticias" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="admin/agregar">Agregar Noticia</a></li>
-    									<li><a href="admin/modificar">Modificar Noticia</a></li>
-    									<li><a href="admin/borrar">Borrar Noticia</a></li>
+                      <li><a href="#an" data-toggle="collapse">Agregar Noticia</a></li>
+    									<li><a href="#mn" data-toggle="collapse">Modificar Noticia</a></li>
+    									<li><a href="#bn" data-toggle="collapse">Borrar Noticia</a></li>
     								</ul>
     							</div>
     						</div>
@@ -145,9 +145,9 @@
     						<div id="dropdown-torneos" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="admin/agregar">Agregar Torneo</a></li>
-    									<li><a href="admin/modificar">Modificar Torneo</a></li>
-    									<li><a href="admin/borrar">Borrar Torneo</a></li>
+                      <li><a href="#at" data-toggle="collapse">Agregar Torneo</a></li>
+    									<li><a href="#mt" data-toggle="collapse">Modificar Torneo</a></li>
+    									<li><a href="#bt" data-toggle="collapse">Borrar Torneo</a></li>
     								</ul>
     							</div>
     						</div>
@@ -162,9 +162,9 @@
     						<div id="dropdown-luchadores" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="admin/agregar">Agregar Luchador</a></li>
-    									<li><a href="admin/modificar">Modificar Luchador</a></li>
-    									<li><a href="admin/borrar">Borrar Luchador</a></li>
+                      <li><a href="#al" data-toggle="collapse">Agregar Luchador</a></li>
+    									<li><a href="#ml" data-toggle="collapse">Modificar Luchador</a></li>
+    									<li><a href="#bl" data-toggle="collapse">Borrar Luchador</a></li>
     								</ul>
     							</div>
     						</div>
