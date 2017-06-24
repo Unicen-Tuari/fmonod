@@ -731,10 +731,8 @@
         <div class="input-group-btn">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
           <ul class="dropdown-menu">
-            {foreach $datos as $dato}
-              {foreach $dato as $datox}
-            <li><a name="id_usuario">{$datox.id_usuario}</a></li>
-              {/foreach}
+            {foreach key="key" item="item" from=$usuarios}
+              <li><a name="id_usuario">{$item.id_usuario}</a></li>
             {/foreach}
           </ul>
         </div><!-- /btn-group -->
@@ -746,7 +744,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
-        <input type="email" class="form-control" aria-label="..." name="username" value="{$datos[id_usuario].nombre_usuario}">
+        <input type="email" class="form-control" aria-label="..." name="username" value="yolo">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -755,7 +753,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" >Contraseña</span>
-        <input type="password" class="form-control" aria-label="..." name="pass" value="{$datos[id_usuario].password}">
+        <input type="password" class="form-control" aria-label="..." name="pass" value="yolo">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -763,8 +761,8 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3" name="administrator" value="{$datos[id_usuario].administrador}">Administrador</span>
-        <input type="text" class="form-control" aria-label="...">
+        <span class="input-group-addon" id="basic-addon3" name="administrator">Administrador</span>
+        <input type="text" class="form-control" aria-label="..." value="yolo">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->

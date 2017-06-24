@@ -25,8 +25,8 @@ class ViewNoticias
     $this->smarty->display('noticias.tpl');
   }
 
-  function cargarVista($datos){
-    $this->smarty->assign("datos", $datos);
+  function cargarVista($noticias){
+    $this->smarty->assign("noticias", $noticias);
     $this->smarty->assign("baseDir", $this->baseDir);
     //$this->smarty->debugging = true;
 

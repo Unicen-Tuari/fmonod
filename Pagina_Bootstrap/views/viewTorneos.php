@@ -24,8 +24,8 @@ class ViewTorneos
     $this->smarty->display('table-torneos.tpl');
   }
 
-  function cargarVista($datos){
-    $this->smarty->assign("datos", $datos);
+  function cargarVista($torneos){
+    $this->smarty->assign("torneos", $torneos);
     $this->smarty->assign("baseDir", $this->baseDir);
     //$this->smarty->debugging = true;
 

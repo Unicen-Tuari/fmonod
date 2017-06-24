@@ -113,7 +113,7 @@ class ControllerUsuarios
     $datos = $this->modelo->GetUsuarios();
     $usuarios = array();
     foreach ($datos as $dato) {
-        $usuarios[]= $dato;
+        $usuarios[] = $dato;
     }
     return $usuarios;
   }
