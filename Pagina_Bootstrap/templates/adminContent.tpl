@@ -412,28 +412,12 @@
     Modificar Luchador
   </div>
   <form name="form" action="admin/modificar/luchadores/true" method="post">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3">ID Luchador</span>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-  <p><!-- Divider --></p>
+  {foreach name=outer item=luchador from=$luchadores}
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre</span>
-        <input type="text" class="form-control" aria-label="..." name="nombre">
+        <input type="text" class="form-control" aria-label="..." name="nombre" value="1">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -442,7 +426,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Apellido</span>
-        <input type="text" class="form-control" aria-label="..." name="apellido">
+        <input type="text" class="form-control" aria-label="..." name="apellido" value="2">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -451,7 +435,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Edad</span>
-        <input type="text" class="form-control" aria-label="..." name="edad">
+        <input type="text" class="form-control" aria-label="..." name="edad" value="3">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -460,17 +444,16 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Categoria</span>
-        <input type="text" class="form-control" aria-label="..." name="categoria">
+        <input type="text" class="form-control" aria-label="..." name="categoria" value="4">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
-  <p><!-- Divider --></p>
   <p><!-- Divider --></p>
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Pais</span>
-        <input type="text" class="form-control" aria-label="..." name="pais">
+        <input type="text" class="form-control" aria-label="..." name="pais" value="5">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -479,7 +462,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Historia</span>
-        <input type="text" class="form-control" aria-label="..." name="historia">
+        <input type="text" class="form-control" aria-label="..." name="historia" value="6">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -488,7 +471,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Link</span>
-        <input type="text" class="form-control" aria-label="..." name="link">
+        <input type="text" class="form-control" aria-label="..." name="link" value="7">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -497,11 +480,12 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Torneos Ganados</span>
-        <input type="text" class="form-control" aria-label="..." name="torneos_ganados">
+        <input type="text" class="form-control" aria-label="..." name="torneos_ganados" value="{$item.torneos_ganados}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  {/foreach}
   <div class="panel-body">
     Para modificar, cargue los datos con el boton celeste.
   </div>
@@ -524,23 +508,6 @@
     Borrar Luchador
   </div>
   <form name="form" action="admin/borrar/luchadores/true" method="post">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3">ID Luchador</span>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-  <p><!-- Divider --></p>
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">

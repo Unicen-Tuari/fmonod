@@ -16,10 +16,10 @@ class ControllerConsultas
   function ctrlVistaConsultas(){
     session_start();
     if ($_SESSION == null) {
-    $this->vista->mostrarContacto("Formulario de consultas",0,0);
+    $this->vista->mostrarContacto("Formulario de consultas",0,0,0);
     }
     else{
-    $this->vista->mostrarContacto("Formulario de consultas",$_SESSION['loggedin'],$_SESSION['username']);
+    $this->vista->mostrarContacto("Formulario de consultas",$_SESSION['loggedin'],$_SESSION['username'],$_SESSION['admin']);
     }
 
   }

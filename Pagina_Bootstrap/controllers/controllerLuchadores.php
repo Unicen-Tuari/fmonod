@@ -21,10 +21,10 @@ class ControllerLuchadores
     }
     session_start();
     if ($_SESSION == null) {
-    $this->vista->mostrarLuchadores("Informacion Luchadores", $luchadoresAMostrar,0,0);
+    $this->vista->mostrarLuchadores("Informacion Luchadores", $luchadoresAMostrar,0,0,0);
     }
     else{
-    $this->vista->mostrarLuchadores("Informacion Luchadores", $luchadoresAMostrar,$_SESSION['loggedin'],$_SESSION['username']);
+    $this->vista->mostrarLuchadores("Informacion Luchadores", $luchadoresAMostrar,$_SESSION['loggedin'],$_SESSION['username'],$_SESSION['admin']);
     }
   }
 

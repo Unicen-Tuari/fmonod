@@ -14,11 +14,12 @@ class ViewTorneos
     $this->baseDir = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/';
   }
 
-  function mostrarTorneos($titulo,$torneos,$login,$username){
+  function mostrarTorneos($titulo,$torneos,$login,$username,$admin){
     $this->smarty->assign("titulo", $titulo);
     $this->smarty->assign("torneos", $torneos);
     $this->smarty->assign("login", $login);
     $this->smarty->assign("username", $username);
+    $this->smarty->assign("admin", $admin);
     $this->smarty->assign("baseDir", $this->baseDir);
 
     $this->smarty->display('table-torneos.tpl');
