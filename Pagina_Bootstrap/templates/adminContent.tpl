@@ -413,11 +413,12 @@
   </div>
   <form name="form" action="admin/modificar/luchadores/true" method="post">
   {foreach name=outer item=luchador from=$luchadores}
+    {foreach key=key item=item from=$luchador}
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre</span>
-        <input type="text" class="form-control" aria-label="..." name="nombre" value="1">
+        <input type="text" class="form-control" aria-label="..." name="nombre" value="{$item.nombre}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -426,7 +427,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Apellido</span>
-        <input type="text" class="form-control" aria-label="..." name="apellido" value="2">
+        <input type="text" class="form-control" aria-label="..." name="apellido" value="{$item.apellido}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -435,7 +436,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Edad</span>
-        <input type="text" class="form-control" aria-label="..." name="edad" value="3">
+        <input type="text" class="form-control" aria-label="..." name="edad" value="{$item.edad}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -444,7 +445,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Categoria</span>
-        <input type="text" class="form-control" aria-label="..." name="categoria" value="4">
+        <input type="text" class="form-control" aria-label="..." name="categoria" value="{$item.categoria}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -453,7 +454,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Pais</span>
-        <input type="text" class="form-control" aria-label="..." name="pais" value="5">
+        <input type="text" class="form-control" aria-label="..." name="pais" value="{$item.pais}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -462,7 +463,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Historia</span>
-        <input type="text" class="form-control" aria-label="..." name="historia" value="6">
+        <input type="text" class="form-control" aria-label="..." name="historia" value="{$item.historia}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -471,7 +472,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Link</span>
-        <input type="text" class="form-control" aria-label="..." name="link" value="7">
+        <input type="text" class="form-control" aria-label="..." name="link" value="{$item.link}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -485,6 +486,7 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+    {/foreach}
   {/foreach}
   <div class="panel-body">
     Para modificar, cargue los datos con el boton celeste.
