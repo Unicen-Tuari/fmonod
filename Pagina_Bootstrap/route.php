@@ -69,7 +69,7 @@
 
       case ConfigApp::$RESOURCE_ADMIN:
       session_start();
-      if ($_SESSION["loggedin"] == true && isset($_SESSION["admin"])) {
+      if (isset($_SESSION["loggedin"]) && isset($_SESSION["admin"]) && ($_SESSION["loggedin"] == true)) {
         $controllerUsuarios->consolaAdmin();
         switch ($datos[ConfigApp::$ACTION]) {
           case ConfigApp::$ACTION_ADD:
@@ -96,24 +96,36 @@
             break;
 
           case ConfigApp::$ACTION_MODIFY:
-          $controller->cargarNoticiasVista();
-          $controllerLuchadores->cargarLuchadoresVista();
-          $controllerTorneos->cargarTorneosVista();
-          $controllerUsuarios->cargarUsuariosVista();
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
-                $controllerUsuarios->modificarUsuario();
+                $controllerUsuarios->cargarUsuariosVista();
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
-                $controllerLuchadores->modificarLuchador();
+                $controllerLuchadores->cargarLuchadoresVista();
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
-                $controllerTorneos->modificarTorneo();
+                $controllerTorneos->cargarTorneosVista();
                 break;
 
               case ConfigApp::$RESOURCE_NEWS:
+                $controller->cargarNoticiasVista();
+                break;
+
+              case ConfigApp::$RESOURCE_USER + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerUsuarios->modificarUsuario();
+                break;
+
+              case ConfigApp::$RESOURCE_FIGHTERS + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerLuchadores->modificarLuchador();
+                break;
+
+              case ConfigApp::$RESOURCE_TOURNAMENTS + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerTorneos->modificarTorneo();
+                break;
+
+              case ConfigApp::$RESOURCE_NEWS + "/" + ConfigApp::$PARAMETER_TRUE:
                 $controller->modificarNoticia();
                 break;
 
@@ -123,24 +135,36 @@
             break;
 
           case ConfigApp::$ACTION_DELETE:
-          $controller->cargarNoticiasVista();
-          $controllerLuchadores->cargarLuchadoresVista();
-          $controllerTorneos->cargarTorneosVista();
-          $controllerUsuarios->cargarUsuariosVista();
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
-                $controllerUsuarios->borrarUsuario();
+                $controllerUsuarios->cargarUsuariosVista();
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
-                $controllerLuchadores->borrarLuchador();
+                $controllerLuchadores->cargarLuchadoresVista();
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
-                $controllerTorneos->borrarTorneo();
+                $controllerTorneos->cargarTorneosVista();
                 break;
 
               case ConfigApp::$RESOURCE_NEWS:
+                $controller->cargarNoticiasVista();
+                break;
+
+              case ConfigApp::$RESOURCE_USER + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerUsuarios->borrarUsuario();
+                break;
+
+              case ConfigApp::$RESOURCE_FIGHTERS + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerLuchadores->borrarLuchador();
+                break;
+
+              case ConfigApp::$RESOURCE_TOURNAMENTS + "/" + ConfigApp::$PARAMETER_TRUE:
+                $controllerTorneos->borrarTorneo();
+                break;
+
+              case ConfigApp::$RESOURCE_NEWS + "/" + ConfigApp::$PARAMETER_TRUE:
                 $controller->borrarNoticia();
                 break;
 

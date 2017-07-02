@@ -1,9 +1,10 @@
+{debug}
 <div class="col-md-10 content collapse" id="mn">
 <div class="panel panel-default">
   <div class="panel-heading">
     Modificar Noticia
   </div>
-  <form name="form" action="admin/modificar/noticias" method="post">
+  <form name="form" action="admin/modificar/noticias/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -76,7 +77,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/modificar" class="btn btn-info">
+  <a href="admin/modificar/noticias" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -88,7 +89,7 @@
   <div class="panel-heading">
     Borrar Noticia
   </div>
-  <form name="form" action="admin/borrar/noticias" method="post">
+  <form name="form" action="admin/borrar/noticias/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -161,7 +162,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/borrar" class="btn btn-info">
+  <a href="admin/borrar/noticias" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -173,7 +174,7 @@
   <div class="panel-heading">
     Agregar Noticia
   </div>
-  <form name="form" action="admin/agregar/noticias" method="post">
+  <form name="form" action="admin/agregar/noticias/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -235,7 +236,7 @@
   <div class="panel-heading">
     Modificar Torneo
   </div>
-  <form name="form" action="admin/modificar/torneos" method="post">
+  <form name="form" action="admin/modificar/torneos/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -289,7 +290,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/modificar" class="btn btn-info">
+  <a href="admin/modificar/torneos" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -301,7 +302,7 @@
   <div class="panel-heading">
     Borrar Torneo
   </div>
-  <form name="form" action="admin/borrar/torneos" method="post">
+  <form name="form" action="admin/borrar/torneos/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -355,7 +356,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/borrar" class="btn btn-info">
+  <a href="admin/borrar/torneos" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -367,7 +368,7 @@
   <div class="panel-heading">
     Agregar Torneo
   </div>
-  <form name="form" action="admin/agregar/torneos" method="post">
+  <form name="form" action="admin/agregar/torneos/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -410,7 +411,7 @@
   <div class="panel-heading">
     Modificar Luchador
   </div>
-  <form name="form" action="admin/modificar/luchadores" method="post">
+  <form name="form" action="admin/modificar/luchadores/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -510,7 +511,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/modificar" class="btn btn-info">
+  <a href="admin/modificar/luchadores" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -522,7 +523,7 @@
   <div class="panel-heading">
     Borrar Luchador
   </div>
-  <form name="form" action="admin/borrar/luchadores" method="post">
+  <form name="form" action="admin/borrar/luchadores/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -622,7 +623,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/borrar" class="btn btn-info">
+  <a href="admin/borrar/luchadores" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -634,7 +635,7 @@
   <div class="panel-heading">
     Agregar Luchador
   </div>
-  <form name="form" action="admin/agregar/luchadores" method="post">
+  <form name="form" action="admin/agregar/luchadores/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -723,7 +724,7 @@
   <div class="panel-heading">
     Modificar Usuario
   </div>
-<form name="form" action="admin/modificar/usuario" method="post">
+<form name="form" action="admin/modificar/usuario/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -731,9 +732,9 @@
         <div class="input-group-btn">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
           <ul class="dropdown-menu">
-            {foreach key="key" item="item" from=$usuarios}
-              <li><a name="id_usuario">{$item.id_usuario}</a></li>
-            {/foreach}
+          {foreach $usuarios as $item}
+          <li><a name="id_usuario">{$item['id_usuario'] }</a></li>
+          {/foreach}
           </ul>
         </div><!-- /btn-group -->
       </div><!-- /input-group -->
@@ -744,7 +745,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
-        <input type="email" class="form-control" aria-label="..." name="username" value="yolo">
+        <input type="email" class="form-control" aria-label="..." name="username" value="{$usuarios[0][0]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -753,7 +754,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" >Contraseña</span>
-        <input type="password" class="form-control" aria-label="..." name="pass" value="yolo">
+        <input type="password" class="form-control" aria-label="..." name="pass" value="{$usuarios[0][1]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -762,7 +763,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" name="administrator">Administrador</span>
-        <input type="text" class="form-control" aria-label="..." value="yolo">
+        <input type="text" class="form-control" aria-label="..." value="{$usuarios[0][2]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -776,7 +777,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/modificar" class="btn btn-info">
+  <a href="admin/modificar/usuario" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -788,7 +789,7 @@
   <div class="panel-heading">
     Borrar Usuario
   </div>
-  <form name="form" action="admin/borrar/usuario" method="post">
+  <form name="form" action="admin/borrar/usuario/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -842,7 +843,7 @@
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/borrar" class="btn btn-info">
+  <a href="admin/borrar/usuario" class="btn btn-info">
     <span class="glyphicon glyphicon-cloud-download"></span>
   </a>
   </form>
@@ -854,7 +855,7 @@
   <div class="panel-heading">
     Agregar Usuario
   </div>
-<form name="form" action="admin/agregar/usuario" method="post">
+<form name="form" action="admin/agregar/usuario/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">

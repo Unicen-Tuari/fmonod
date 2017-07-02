@@ -59,7 +59,7 @@ class ViewUsuarios
     $this->smarty->assign("usuarios", $usuarios);
     $this->smarty->assign("baseDir", $this->baseDir);
     //$this->smarty->error_reporting = E_ALL & ~E_NOTICE;
-    //$this->smarty->debugging = true;
+    $this->smarty->debugging = true;
     //echo "<pre>";
     //print_r($datos);
     $this->smarty->display('adminContent.tpl');
