@@ -71,7 +71,7 @@
       case ConfigApp::$RESOURCE_ADMIN:
       session_start();
       if (isset($_SESSION["loggedin"]) && isset($_SESSION["admin"]) && ($_SESSION["loggedin"] == true)) {
-        //$controllerUsuarios->consolaAdmin();
+        $controllerUsuarios->consolaAdmin();
         switch ($datos[ConfigApp::$ACTION]) {
           case ConfigApp::$ACTION_ADD:
             switch ($datos[ConfigApp::$PARAMETERS]) {
