@@ -30,7 +30,7 @@ class ViewLuchadores
     $this->smarty->assign("baseDir", $this->baseDir);
     //$this->smarty->debugging = true;
 
-    $this->smarty->display('adminContent.tpl');
+    $this->smarty->display('edicion-luchadores.tpl');
   }
 }
 ?>
