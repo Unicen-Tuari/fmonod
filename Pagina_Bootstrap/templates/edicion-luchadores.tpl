@@ -1,4 +1,3 @@
-{debug}
 <div class="col-md-10 content collapse" id="ml">
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -9,7 +8,7 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3">Nombre {$luchador.nombre}</span>
+        <span class="input-group-addon" id="basic-addon3">Nombre</span>
         <input type="text" class="form-control" aria-label="..." name="nombre" value="{$luchador.nombre}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
