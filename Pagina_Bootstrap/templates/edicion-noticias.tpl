@@ -1,7 +1,7 @@
 <div class="col-md-10 content collapse" id="mn">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Modificar Noticia
+    Editar Noticia
   </div>
   <form name="form" action="admin/modificar/noticias/true" method="post">
   <div class="row">

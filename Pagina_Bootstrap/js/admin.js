@@ -19,7 +19,3 @@ $(function () {
   $(document).ready(function(){
 		$("#modalError").modal('show');
 	});
-
-  //$("#mn").hide();
-  //$("#bn").hide();
-  //$("#an").hide();

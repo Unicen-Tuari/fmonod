@@ -1,7 +1,7 @@
 <div class="col-md-10 content collapse" id="mu">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Modificar Usuario
+    Editar Usuario
   </div>
 <form name="form" action="admin/modificar/usuario/true" method="post">
   <div class="row">

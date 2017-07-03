@@ -79,10 +79,6 @@ class ControllerLuchadores
     return $luchadores;
   }
 
-  function mostrarAgregarLuchador(){
-    $this->vista->mostrarVistaAgregar();
-  }
-
   function cargarLuchadoresVista(){
     $luchadores = $this->getLuchadores();
     $this->vista->cargarVista($luchadores);

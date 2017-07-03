@@ -160,8 +160,8 @@
     						<div id="dropdown-luchadores" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="admin/agregar/luchadores" data-parent="#grupo">Agregar Luchador</a></li>
-    									<li><a href="admin/listar/luchadores" data-parent="#grupo">Editar Luchador</a></li>
+                      <li><a href="admin/agregar/luchadores#al" data-toggle="collapse" data-parent="#grupo">Agregar Luchador</a></li>
+    									<li><a href="admin/listar/luchadores#ml" data-parent="#grupo">Editar Luchador</a></li>
     								</ul>
     							</div>
     						</div>
@@ -189,7 +189,7 @@
   </div>
   <div id="grupo">
   {include file="edicion-noticias.tpl"}
-
+  {include file="edicion-luchadores.tpl"}
   {include file="edicion-torneos.tpl"}
   {include file="edicion-usuarios.tpl"}
   </div>

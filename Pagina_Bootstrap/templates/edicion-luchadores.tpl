@@ -6,13 +6,13 @@
     <base href="{$baseDir}">
   </head>
   <body>
-    <div class="col-md-10 content" id="ml">
+    <div class="col-md-10 content collapse" id="ml">
     <div class="panel panel-default">
     <div class="panel-heading">
-      Modificar Luchador
+      Editar Luchador
     </div>
-    <form name="form" action="admin/modificar/luchadores/true" method="post">
     {foreach $luchadores as $luchador}
+    <form name="form" action="admin/modificar/luchadores/{$luchador.id_luchador}" method="post">
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
@@ -102,7 +102,7 @@
     </div>
     </div>
 
-    <div class="col-md-10 content" id="al">
+    <div class="col-md-10 content collapse" id="al">
     <div class="panel panel-default">
     <div class="panel-heading">
       Agregar Luchador

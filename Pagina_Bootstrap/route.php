@@ -73,23 +73,33 @@
       if (isset($_SESSION["loggedin"]) && isset($_SESSION["admin"]) && ($_SESSION["loggedin"] == true)) {
         $controllerUsuarios->consolaAdmin();
         switch ($datos[ConfigApp::$ACTION]) {
+          
           case ConfigApp::$ACTION_ADD:
             switch ($datos[ConfigApp::$PARAMETERS]) {
+
               case ConfigApp::$RESOURCE_USER:
-                $controllerUsuarios->agregarUsuario();
+                if ($datos[ConfigApp::$ID] == ConfigApp::$PARAMETER_TRUE) {
+                  $controllerUsuarios->agregarUsuario();
+                }
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
                 $controllerLuchadores->mostrarAgregarLuchador();
-                //$controllerLuchadores->agregarLuchador();
+                if ($datos[ConfigApp::$ID] == ConfigApp::$PARAMETER_TRUE) {
+                  $controllerLuchadores->agregarLuchador();
+                }
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
-                $controllerTorneos->agregarTorneo();
+                if ($datos[ConfigApp::$ID] == ConfigApp::$PARAMETER_TRUE) {
+                  $controllerTorneos->agregarTorneo();
+                }
                 break;
 
               case ConfigApp::$RESOURCE_NEWS:
+              if ($datos[ConfigApp::$ID] == ConfigApp::$PARAMETER_TRUE) {
                 $controller->agregarNoticia();
+              }
                 break;
 
               default:

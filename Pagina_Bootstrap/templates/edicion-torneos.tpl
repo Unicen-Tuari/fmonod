@@ -1,7 +1,7 @@
 <div class="col-md-10 content collapse" id="mt">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Modificar Torneo
+    Editar Torneo
   </div>
   <form name="form" action="admin/modificar/torneos/true" method="post">
   <div class="row">
