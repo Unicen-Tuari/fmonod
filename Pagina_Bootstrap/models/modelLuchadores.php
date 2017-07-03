@@ -33,7 +33,13 @@ class ModelLuchadores
   function ModificarLuchador($id_luchador,$nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados)
   {
     $sentencia = $this->db->prepare("UPDATE luchadores SET nombre=?,apellido=?,edad=?,categoria=?,pais=?,historia=?,link=?,torneos_ganados=?,WHERE id_luchador=?");
-    $sentencia->execute(array($id_luchador,$nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados));
+    $sentencia->execute(array($id_luchador,$nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados));//ID-luchador tiene que ser ultimo es por posiscion los valires del array, id luchador es el ultimo que se setea.
+  }
+
+  function EditarLuchador($id_luchador,$nombre, $apellido, $edad)
+  {
+    $sentencia = $this->db->prepare("UPDATE luchadores SET nombre=?,apellido=?,edad=? WHERE id_luchador=?");
+    $sentencia->execute(array($nombre, $apellido, $edad, $id_luchador));
   }
 
   function GetLuchador($id_luchador)

@@ -7,6 +7,7 @@ class ConfigApp{
         public static $ACTION_ADD = 'agregar';
         public static $ACTION_DELETE = 'borrar';
         public static $ACTION_MODIFY = 'modificar';
+        public static $ACTION_GET = 'listar';
         public static $ACTION_REGISTERED = 'registrado';
         public static $RESOURCE_HOME = 'inicio';
         public static $RESOURCE_NEWS = 'noticias';
@@ -21,5 +22,6 @@ class ConfigApp{
         public static $ACTION = 'action';
         public static $RESOURCE = 'recurso';
         public static $PARAMETERS = 'params';
+        public static $ID = 'id';
 }
 ?>

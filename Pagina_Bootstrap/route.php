@@ -11,6 +11,7 @@
     $arrayReturn[ConfigApp::$RESOURCE] = $arr_data[0];
     $arrayReturn[ConfigApp::$ACTION] = isset($arr_data[1]) ? $arr_data[1] : null;
     $arrayReturn[ConfigApp::$PARAMETERS] = isset($arr_data[2]) ? $arr_data[2] : null;
+    $arrayReturn[ConfigApp::$ID] = isset($arr_data[3]) ? $arr_data[3] : null;
     return $arrayReturn;
   }
 
@@ -70,7 +71,7 @@
       case ConfigApp::$RESOURCE_ADMIN:
       session_start();
       if (isset($_SESSION["loggedin"]) && isset($_SESSION["admin"]) && ($_SESSION["loggedin"] == true)) {
-        $controllerUsuarios->consolaAdmin();
+        //$controllerUsuarios->consolaAdmin();
         switch ($datos[ConfigApp::$ACTION]) {
           case ConfigApp::$ACTION_ADD:
             switch ($datos[ConfigApp::$PARAMETERS]) {
@@ -102,7 +103,10 @@
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
-                $controllerLuchadores->cargarLuchadoresVista();
+                  if(isset($_POST['nombre']))
+                    $controllerLuchadores->editarLuchador($datos[ConfigApp::$ID]);
+                  else
+                    $controllerLuchadores->cargarEditarLuchador($datos[ConfigApp::$ID]);
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
@@ -141,7 +145,7 @@
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
-                $controllerLuchadores->cargarLuchadoresVista();
+                $controllerLuchadores->eliminarLuchador($datos[ConfigApp::$ID]);
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
@@ -172,7 +176,13 @@
                 break;
             }
             break;
-
+            case ConfigApp::$ACTION_GET:
+              switch ($datos[ConfigApp::$PARAMETERS]) {
+                case ConfigApp::$RESOURCE_FIGHTERS:
+                  $controllerLuchadores->cargarLuchadoresAdmin();
+                  break;
+              }
+            break;
           default:
             break;
         }

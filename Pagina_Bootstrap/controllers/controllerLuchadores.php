@@ -52,9 +52,22 @@ class ControllerLuchadores
     $this->modelo->ModificarLuchador($_POST["id_luchador"],$nombre,$apellido,$edad,$categoria,$pais,$historia,$link,$torneos_ganados);
   }
 
+  function editarLuchador($id_luchador){
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $edad = $_POST["edad"];
+    $this->modelo->EditarLuchador($id_luchador,$nombre,$apellido,$edad);
+    $this->cargarLuchadoresAdmin();
+  }
+
   function borrarLuchador(){
     $id_luchador = $_POST["id_luchador"];
     $this->modelo->BorrarLuchador($id_luchador);
+  }
+
+  function eliminarLuchador($id_luchador){
+    $this->modelo->BorrarLuchador($id_luchador);
+    $this->cargarLuchadoresAdmin();
   }
 
   function getLuchadores(){
@@ -70,5 +83,16 @@ class ControllerLuchadores
     $luchadores = $this->getLuchadores();
     $this->vista->cargarVista($luchadores);
   }
+
+  function cargarLuchadoresAdmin(){
+    $luchadores = $this->getLuchadores();
+    $this->vista->cargarVistaAdmin($luchadores);
+  }
+
+  function cargarEditarLuchador($id){
+    $luchador = $this->modelo->GetLuchador($id);
+    $this->vista->cargarVistaEditarAdmin($luchador);
+  }
+
 }
 ?>
