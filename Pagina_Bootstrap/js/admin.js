@@ -19,3 +19,8 @@ $(function () {
   $(document).ready(function(){
 		$("#modalError").modal('show');
 	});
+
+var url = document.location.toString();
+if ( url.match('#') ) {
+    $('#'+url.split('#')[1]).addClass('in');
+}
