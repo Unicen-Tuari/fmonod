@@ -33,10 +33,17 @@ class ViewLuchadores
     $this->smarty->display('edicion-luchadores.tpl');
   }
 
+  function mostrarVistaAgregar(){
+    $this->smarty->assign("baseDir", $this->baseDir);
+    //$this->smarty->debugging = true;
+    
+    $this->smarty->display('edicion-luchadores.tpl');
+  }
+
   function cargarVistaAdmin($luchadores){
     $this->smarty->assign("luchadores", $luchadores);
     $this->smarty->assign("baseDir", $this->baseDir);
-    $this->smarty->display('admin-luchadores.tpl');
+    $this->smarty->display('edicion-luchadores.tpl');
   }
 
   function cargarVistaEditarAdmin($luchador){

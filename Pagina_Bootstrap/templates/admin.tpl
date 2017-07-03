@@ -96,8 +96,7 @@
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
     									<li><a href="#au" data-toggle="collapse" data-parent="#grupo">Agregar Usuario</a></li>
-    									<li><a href="#mu" data-toggle="collapse" data-parent="#grupo">Modificar Usuario</a></li>
-    									<li><a href="#bu" data-toggle="collapse" data-parent="#grupo">Borrar Usuario</a></li>
+    									<li><a href="#mu" data-toggle="collapse" data-parent="#grupo">Editar Usuario</a></li>
 
     									<!-- Dropdown level 2 -->
     									<li class="panel panel-default" id="dropdown">
@@ -129,8 +128,7 @@
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
                       <li><a href="#an" data-toggle="collapse" data-parent="#grupo">Agregar Noticia</a></li>
-    									<li><a href="#mn" data-toggle="collapse" data-parent="#grupo">Modificar Noticia</a></li>
-    									<li><a href="#bn" data-toggle="collapse" data-parent="#grupo">Borrar Noticia</a></li>
+    									<li><a href="#mn" data-toggle="collapse" data-parent="#grupo">Editar Noticia</a></li>
     								</ul>
     							</div>
     						</div>
@@ -147,8 +145,7 @@
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
                       <li><a href="#at" data-toggle="collapse" data-parent="#grupo">Agregar Torneo</a></li>
-    									<li><a href="#mt" data-toggle="collapse" data-parent="#grupo">Modificar Torneo</a></li>
-    									<li><a href="#bt" data-toggle="collapse" data-parent="#grupo">Borrar Torneo</a></li>
+    									<li><a href="#mt" data-toggle="collapse" data-parent="#grupo">Editar Torneo</a></li>
     								</ul>
     							</div>
     						</div>
@@ -163,9 +160,8 @@
     						<div id="dropdown-luchadores" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="#al" data-toggle="collapse" data-parent="#grupo">Agregar Luchador</a></li>
-    									<li><a href="#ml" data-toggle="collapse" data-parent="#grupo">Modificar Luchador</a></li>
-    									<li><a href="#bl" data-toggle="collapse" data-parent="#grupo">Borrar Luchador</a></li>
+                      <li><a href="admin/agregar/luchadores" data-parent="#grupo">Agregar Luchador</a></li>
+    									<li><a href="admin/listar/luchadores" data-parent="#grupo">Editar Luchador</a></li>
     								</ul>
     							</div>
     						</div>
@@ -193,7 +189,7 @@
   </div>
   <div id="grupo">
   {include file="edicion-noticias.tpl"}
-  {include file="edicion-luchadores.tpl"}
+
   {include file="edicion-torneos.tpl"}
   {include file="edicion-usuarios.tpl"}
   </div>

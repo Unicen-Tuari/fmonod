@@ -80,7 +80,8 @@
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
-                $controllerLuchadores->agregarLuchador();
+                $controllerLuchadores->mostrarAgregarLuchador();
+                //$controllerLuchadores->agregarLuchador();
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
@@ -176,6 +177,7 @@
                 break;
             }
             break;
+
             case ConfigApp::$ACTION_GET:
               switch ($datos[ConfigApp::$PARAMETERS]) {
                 case ConfigApp::$RESOURCE_FIGHTERS:
@@ -183,6 +185,7 @@
                   break;
               }
             break;
+
           default:
             break;
         }
