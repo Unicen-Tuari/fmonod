@@ -21,7 +21,7 @@ class ViewUsuarios
     $this->smarty->display('registro.tpl');
   }
 
-  function mostrarAdministracionDatos($titulo,$datos){
+  /*function mostrarAdministracionDatos($titulo,$datos){
     if (!isset($datos)) {
       $this->mostrarAdministracion($titulo);
     }
@@ -32,7 +32,7 @@ class ViewUsuarios
 
       $this->smarty->display('adminContent.tpl');
     }
-  }
+  }*/
 
   function mostrarAdministracion($titulo){
     $this->smarty->assign("titulo", $titulo);
@@ -55,14 +55,18 @@ class ViewUsuarios
     $this->smarty->display('registerTrue.tpl');
   }
 
-  function cargarVista($usuarios){
+  function cargarVistaAdmin($usuarios){
     $this->smarty->assign("usuarios", $usuarios);
     $this->smarty->assign("baseDir", $this->baseDir);
-    //$this->smarty->error_reporting = E_ALL & ~E_NOTICE;
-    //$this->smarty->debugging = true;
-    //echo "<pre>";
-    //print_r($datos);
+
     $this->smarty->display('edicion-usuarios.tpl');
+  }
+
+  function cargarVistaEditarAdmin($usuario){
+    $this->smarty->assign("usuario", $usuario);
+    $this->smarty->assign("baseDir", $this->baseDir);
+
+    $this->smarty->display('admin-edit-usuario.tpl');
   }
 }
 ?>

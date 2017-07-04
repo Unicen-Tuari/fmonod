@@ -37,11 +37,6 @@ class ModelLuchadores
     //var_dump($sentencia->errorInfo());
   }
 
-  function EditarLuchador($id_luchador,$nombre, $apellido, $edad)
-  {
-    $sentencia = $this->db->prepare("UPDATE luchadores SET nombre=?,apellido=?,edad=? WHERE id_luchador=?");
-    $sentencia->execute(array($nombre, $apellido, $edad, $id_luchador));
-  }
 
   function GetLuchador($id_luchador)
   {

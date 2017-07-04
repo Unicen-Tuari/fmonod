@@ -30,10 +30,10 @@ class ModelTorneos
     $sentencia->execute(array($id_torneo));
   }
 
-  function ModificarNoticia($id_torneo,$nombre_torneo, $lugar, $fecha_torneo)
+  function ModificarTorneo($id_torneo,$nombre_torneo, $lugar, $fecha_torneo)
   {
     $sentencia = $this->db->prepare("UPDATE torneos SET nombre_torneo=?,lugar=?,fecha_torneo=? WHERE id_torneo=?");
-    $sentencia->execute(array($id_torneo,$nombre_torneo, $lugar, $fecha_torneo));
+    $sentencia->execute(array($nombre_torneo, $lugar, $fecha_torneo, $id_torneo));
   }
 
   function GetTorneo($id_torneo)

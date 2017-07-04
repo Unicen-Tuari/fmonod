@@ -25,13 +25,18 @@ class ViewNoticias
     $this->smarty->display('noticias.tpl');
   }
 
-  function cargarVista($noticias){
+  function cargarVistaAdmin($noticias){
     $this->smarty->assign("noticias", $noticias);
     $this->smarty->assign("baseDir", $this->baseDir);
-    //$this->smarty->debugging = true;
 
     $this->smarty->display('edicion-noticias.tpl');
   }
 
+  function cargarVistaEditarAdmin($noticia){
+    $this->smarty->assign("noticia", $noticia);
+    $this->smarty->assign("baseDir", $this->baseDir);
+
+    $this->smarty->display('admin-edit-noticia.tpl');
+  }
 }
 ?>

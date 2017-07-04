@@ -120,11 +120,17 @@
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
-                $controllerTorneos->cargarTorneosVista();
+                if(isset($_POST['nombre_torneo']))
+                  $controllerTorneos->modificarTorneo($datos[ConfigApp::$ID]);
+                else
+                  $controllerTorneos->cargarEditarTorneo($datos[ConfigApp::$ID]);
                 break;
 
               case ConfigApp::$RESOURCE_NEWS:
-                $controller->cargarNoticiasVista();
+                if(isset($_POST['titulo']))
+                  $controller->modificarNoticia($datos[ConfigApp::$ID]);
+                else
+                  $controller->cargarEditarNoticia($datos[ConfigApp::$ID]);
                 break;
 
               default:
@@ -134,8 +140,9 @@
 
           case ConfigApp::$ACTION_DELETE:
             switch ($datos[ConfigApp::$PARAMETERS]) {
+
               case ConfigApp::$RESOURCE_USER:
-                $controllerUsuarios->cargarUsuariosVista();
+                $controllerUsuarios->eliminarUsuario($datos[ConfigApp::$ID]);
                 break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
@@ -143,11 +150,11 @@
                 break;
 
               case ConfigApp::$RESOURCE_TOURNAMENTS:
-                $controllerTorneos->cargarTorneosVista();
+                $controllerTorneos->eliminarTorneo($datos[ConfigApp::$ID]);
                 break;
 
               case ConfigApp::$RESOURCE_NEWS:
-                $controller->cargarNoticiasVista();
+                $controller->eliminarNoticia($datos[ConfigApp::$ID]);
                 break;
 
               default:
@@ -157,10 +164,23 @@
 
             case ConfigApp::$ACTION_GET:
               switch ($datos[ConfigApp::$PARAMETERS]) {
+
+                case ConfigApp::$RESOURCE_USER:
+                  $controllerUsuarios->cargarUsuariosVista();
+                  break;
+
                 case ConfigApp::$RESOURCE_FIGHTERS:
                   $controllerLuchadores->cargarLuchadoresVista();
                   break;
-              }
+
+                case ConfigApp::$RESOURCE_TOURNAMENTS:
+                  $controllerTorneos->cargarTorneosVista();
+                  break;
+
+                case ConfigApp::$RESOURCE_NEWS:
+                  $controller->cargarNoticiasVista();
+                  break;
+                }
             break;
 
           default:

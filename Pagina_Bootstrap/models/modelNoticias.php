@@ -33,7 +33,7 @@ class ModelNoticias
   function ModificarNoticia($id_noticia,$titulo, $titulo_muted, $detalle, $imagen)
   {
     $sentencia = $this->db->prepare("UPDATE noticias SET titulo=?,titulo_muted=?,detalle=?,imagen=? WHERE id_noticia=?");
-    $sentencia->execute(array($id_noticia,$titulo, $titulo_muted, $detalle, $imagen));
+    $sentencia->execute(array($titulo, $titulo_muted, $detalle, $imagen, $id_noticia));
   }
 
   function GetNoticia($id_noticia)

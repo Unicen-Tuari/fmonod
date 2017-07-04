@@ -25,12 +25,18 @@ class ViewTorneos
     $this->smarty->display('table-torneos.tpl');
   }
 
-  function cargarVista($torneos){
+  function cargarVistaAdmin($torneos){
     $this->smarty->assign("torneos", $torneos);
     $this->smarty->assign("baseDir", $this->baseDir);
-    //$this->smarty->debugging = true;
 
     $this->smarty->display('edicion-torneos.tpl');
+  }
+
+  function cargarVistaEditarAdmin($torneo){
+    $this->smarty->assign("torneo", $torneo);
+    $this->smarty->assign("baseDir", $this->baseDir);
+
+    $this->smarty->display('admin-edit-torneo.tpl');
   }
 }
 ?>

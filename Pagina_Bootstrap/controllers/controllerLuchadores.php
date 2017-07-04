@@ -53,11 +53,6 @@ class ControllerLuchadores
     $this->cargarLuchadoresVista();
   }
 
-  function borrarLuchador(){
-    $id_luchador = $_POST["id_luchador"];
-    $this->modelo->BorrarLuchador($id_luchador);
-  }
-
   function eliminarLuchador($id_luchador){
     $this->modelo->BorrarLuchador($id_luchador);
     $this->cargarLuchadoresVista();

@@ -95,8 +95,8 @@
     						<div id="dropdown-lvl1" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="#au" data-toggle="collapse" data-parent="#grupo">Agregar Usuario</a></li>
-    									<li><a href="#mu" data-toggle="collapse" data-parent="#grupo">Editar Usuario</a></li>
+    									<li><a href="admin/agregar/torneos#au" data-toggle="collapse" data-parent="#grupo">Agregar Usuario</a></li>
+    									<li><a href="admin/listar/usuarios#mu" data-parent="#grupo">Editar Usuario</a></li>
 
     									<!-- Dropdown level 2 -->
     									<li class="panel panel-default" id="dropdown">
@@ -127,8 +127,8 @@
     						<div id="dropdown-noticias" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="#an" data-toggle="collapse" data-parent="#grupo">Agregar Noticia</a></li>
-    									<li><a href="#mn" data-toggle="collapse" data-parent="#grupo">Editar Noticia</a></li>
+                      <li><a href="admin/agregar/noticias#an" data-toggle="collapse" data-parent="#grupo">Agregar Noticia</a></li>
+    									<li><a href="admin/listar/noticias#mn" data-parent="#grupo">Editar Noticia</a></li>
     								</ul>
     							</div>
     						</div>
@@ -144,8 +144,8 @@
     						<div id="dropdown-torneos" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-                      <li><a href="#at" data-toggle="collapse" data-parent="#grupo">Agregar Torneo</a></li>
-    									<li><a href="#mt" data-toggle="collapse" data-parent="#grupo">Editar Torneo</a></li>
+                      <li><a href="admin/agregar/torneos#at" data-toggle="collapse" data-parent="#grupo">Agregar Torneo</a></li>
+    									<li><a href="admin/listar/torneos#mt" data-parent="#grupo">Editar Torneo</a></li>
     								</ul>
     							</div>
     						</div>

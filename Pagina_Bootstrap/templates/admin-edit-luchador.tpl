@@ -8,6 +8,9 @@
   <body>
   <div class="col-md-10 content collapse in" id="al">
     <div class="panel panel-default">
+      <div class="panel-heading">
+        Editar Luchador
+      </div>
     <form name="form" action="admin/modificar/luchadores/{$luchador.id_luchador}" method="post">
       <div class="row">
         <div class="col-lg-6">

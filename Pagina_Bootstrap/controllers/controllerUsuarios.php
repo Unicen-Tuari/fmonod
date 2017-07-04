@@ -96,17 +96,18 @@ class ControllerUsuarios
     $this->modelo->InsertarUsuarioAdmin($nombre_usuario,$hash,$admin);
   }
 
-  function modificarUsuario(){
+  function modificarUsuario($id_usuario){
     $nombre_usuario = $_POST["username"];
     $password = $_POST["pass"];
     $admin = (isset($_POST["administrator"])) ? $_POST["administrator"] : null ;
     $hash = password_hash($password, PASSWORD_DEFAULT);
-    $this->modelo->ModificarUsuario($_POST["id_usuario"],$nombre_usuario,$hash,$admin);
+    $this->modelo->ModificarUsuario($id_usuario,$nombre_usuario,$hash,$admin);
+    $this->cargarUsuariosVista();
   }
 
-  function borrarUsuario(){
-    $id_usuario = $_POST["id_usuario"];
+  function eliminarUsuario($id_usuario){
     $this->modelo->BorrarUsuario($id_usuario);
+    $this->cargarUsuariosVista();
   }
 
   function getUsuarios(){
@@ -120,8 +121,12 @@ class ControllerUsuarios
 
   function cargarUsuariosVista(){
     $usuarios = $this->getUsuarios();
-    //print_r($usuarios);
-    $this->vista->cargarVista($usuarios);
+    $this->vista->cargarVistaAdmin($usuarios);
+  }
+
+  function cargarEditarUsuario($id){
+    $usuario = $this->modelo->GetUsuario($id);
+    $this->vista->cargarVistaEditarAdmin($usuario);
   }
 }
 ?>

@@ -49,18 +49,19 @@ class ControllerNoticias
     $this->modelo->InsertarNoticia($titulo,$titulo_muted,$detalle,$autor,$imagen);
   }
 
-  function modificarNoticia(){
+  function modificarNoticia($id_noticia){
     $titulo = $_POST["titulo"];
     $titulo_muted = $_POST["titulo_muted"];
     $detalle = $_POST["detalle"];
     $autor = $_POST["autor"];
     $imagen = $_POST["imagen"];
-    $this->modelo->ModificarNoticia($_POST["id_noticia"],$titulo,$titulo_muted,$detalle,$autor,$imagen);
+    $this->modelo->ModificarNoticia($id_noticia,$titulo,$titulo_muted,$detalle,$autor,$imagen);
+    $this->cargarNoticiasVista();
   }
 
-  function borrarNoticia(){
-    $id_noticia = $_POST["id_noticia"];
+  function eliminarNoticia($id_noticia){
     $this->modelo->BorrarNoticia($id_noticia);
+    $this->cargarNoticiasVista();
   }
 
   function getNoticias(){
@@ -74,7 +75,12 @@ class ControllerNoticias
 
   function cargarNoticiasVista(){
     $noticias = $this->getNoticias();
-    $this->vista->cargarVista($noticias);
+    $this->vista->cargarVistaAdmin($noticias);
+  }
+
+  function cargarEditarNoticia($id){
+    $noticia = $this->modelo->GetNoticia($id);
+    $this->vista->cargarVistaEditarAdmin($noticia);
   }
 }
 ?>

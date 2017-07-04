@@ -48,7 +48,7 @@ class ModelUsuarios
   function ModificarUsuario($id_usuario,$nombre_usuario, $password, $admin)
   {
     $sentencia = $this->db->prepare("UPDATE usuarios SET nombre_usuario=?,password=?, administrador=? WHERE id_usuario=?");
-    $sentencia->execute(array($nombre_usuario, $password, $admin,$id_usuario));
+    $sentencia->execute(array($nombre_usuario, $password, $admin, $id_usuario));
   }
 
   function GetLogin($nombre_usuario)
