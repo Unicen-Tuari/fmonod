@@ -109,8 +109,11 @@
           case ConfigApp::$ACTION_MODIFY:
             switch ($datos[ConfigApp::$PARAMETERS]) {
               case ConfigApp::$RESOURCE_USER:
-                $controllerUsuarios->cargarUsuariosVista();
-                break;
+                if(isset($_POST['nombre_usuario']))
+                  $controllerUsuarios->modificarUsuario($datos[ConfigApp::$ID]);
+                else
+                  $controllerUsuarios->cargarEditarUsuario($datos[ConfigApp::$ID]);
+              break;
 
               case ConfigApp::$RESOURCE_FIGHTERS:
                   if(isset($_POST['nombre']))

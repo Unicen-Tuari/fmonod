@@ -30,10 +30,10 @@ class ModelNoticias
     $sentencia->execute(array($id_noticia));
   }
 
-  function ModificarNoticia($id_noticia,$titulo, $titulo_muted, $detalle, $imagen)
+  function ModificarNoticia($id_noticia,$titulo, $titulo_muted, $detalle, $autor, $imagen)
   {
-    $sentencia = $this->db->prepare("UPDATE noticias SET titulo=?,titulo_muted=?,detalle=?,imagen=? WHERE id_noticia=?");
-    $sentencia->execute(array($titulo, $titulo_muted, $detalle, $imagen, $id_noticia));
+    $sentencia = $this->db->prepare("UPDATE noticias SET titulo=?,titulo_muted=?,detalle=?, autor=?,imagen=? WHERE id_noticia=?");
+    $sentencia->execute(array($titulo, $titulo_muted, $detalle, $autor, $imagen, $id_noticia));
   }
 
   function GetNoticia($id_noticia)

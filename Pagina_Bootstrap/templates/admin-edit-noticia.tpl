@@ -42,8 +42,8 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="input-group">
-            <span class="input-group-addon" id="basic-addon3">Imagen</span>
-            <input type="text" class="form-control" aria-label="..." name="imagen" value="{$noticia.imagen}">
+            <span class="input-group-addon" id="basic-addon3">Autor</span>
+            <input type="text" class="form-control" aria-label="..." name="autor" value="{$noticia.autor}">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->
@@ -52,8 +52,8 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="input-group">
-            <span class="input-group-addon" id="basic-addon3">Autor</span>
-            <input type="text" class="form-control" aria-label="..." name="autor" value="{$noticia.autor}">
+            <span class="input-group-addon" id="basic-addon3">Imagen</span>
+            <input type="text" class="form-control" aria-label="..." name="imagen" value="{$noticia.imagen}">
           </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->

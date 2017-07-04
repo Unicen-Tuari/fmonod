@@ -95,24 +95,8 @@
     						<div id="dropdown-lvl1" class="panel-collapse collapse">
     							<div class="panel-body">
     								<ul class="nav navbar-nav">
-    									<li><a href="admin/agregar/torneos#au" data-toggle="collapse" data-parent="#grupo">Agregar Usuario</a></li>
-    									<li><a href="admin/listar/usuarios#mu" data-parent="#grupo">Editar Usuario</a></li>
-
-    									<!-- Dropdown level 2 -->
-    									<li class="panel panel-default" id="dropdown">
-    										<a data-toggle="collapse" href="#dropdown-lvl2">
-    											<span class="glyphicon glyphicon-off"></span>Cambiar Permisos<span class="caret"></span>
-    										</a>
-    										<div id="dropdown-lvl2" class="panel-collapse collapse">
-    											<div class="panel-body">
-    												<ul class="nav navbar-nav">
-    													<li><a href="admin/">Setear Usuario Administrador</a></li>
-    													<li><a href="admin/">Setear Usuario Moderador</a></li>
-    													<li><a href="admin/">Quitar Permisos</a></li>
-    												</ul>
-    											</div>
-    										</div>
-    									</li>
+    									<li><a href="admin/agregar/usuario#au" data-toggle="collapse" data-parent="#grupo">Agregar Usuario</a></li>
+    									<li><a href="admin/listar/usuario#mu" data-parent="#grupo">Editar Usuario</a></li>
     								</ul>
     							</div>
     						</div>
