@@ -188,10 +188,10 @@
     </div>
   </div>
   <div id="grupo">
-  {include file="edicion-noticias.tpl"}
-  {include file="edicion-luchadores.tpl"}
-  {include file="edicion-torneos.tpl"}
-  {include file="edicion-usuarios.tpl"}
+  {include file="agregar-noticias.tpl"}
+  {include file="agregar-luchadores.tpl"}
+  {include file="agregar-torneos.tpl"}
+  {include file="agregar-usuarios.tpl"}
   </div>
 
     <!-- Bootstrap core JavaScript

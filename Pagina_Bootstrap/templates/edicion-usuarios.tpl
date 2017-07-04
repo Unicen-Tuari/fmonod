@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edicion Luchadores</title>
+    <base href="{$baseDir}">
+  </head>
+  <body>
 <div class="col-md-10 content collapse" id="mu">
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -11,9 +19,8 @@
         <div class="input-group-btn">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
           <ul class="dropdown-menu">
-          {foreach $usuarios as $item}
-          <li><a name="id_usuario">{$item['id_usuario'] }</a></li>
-          {/foreach}
+          {foreach $usuarios as $usuario}
+          <li><a name="id_usuario">{$usuario['id_usuario'] }</a></li>
           </ul>
         </div><!-- /btn-group -->
       </div><!-- /input-group -->
@@ -24,7 +31,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre Usuario</span>
-        <input type="email" class="form-control" aria-label="..." name="username" value="{$usuarios[0][0]}">
+        <input type="email" class="form-control" aria-label="..." name="username" value="{$usuario[0][0]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -33,7 +40,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" >Contraseña</span>
-        <input type="password" class="form-control" aria-label="..." name="pass" value="{$usuarios[0][1]}">
+        <input type="password" class="form-control" aria-label="..." name="pass" value="{$usuario[0][1]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -42,11 +49,12 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3" name="administrator">Administrador</span>
-        <input type="text" class="form-control" aria-label="..." value="{$usuarios[0][2]}">
+        <input type="text" class="form-control" aria-label="..." value="{$usuario[0][2]}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
+  {/foreach}
   <div class="panel-body">
     Para modificar, cargue los datos con el boton celeste.
   </div>
@@ -105,3 +113,5 @@
   </form>
 </div>
 </div>
+</body>
+</html>

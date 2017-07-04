@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edicion Luchadores</title>
+    <base href="{$baseDir}">
+  </head>
+  <body>
 <div class="col-md-10 content collapse" id="mt">
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -106,3 +114,5 @@
   </form>
 </div>
 </div>
+</body>
+</html>

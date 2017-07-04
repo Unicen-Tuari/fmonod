@@ -411,14 +411,12 @@
   <div class="panel-heading">
     Modificar Luchador
   </div>
-  <form name="form" action="admin/modificar/luchadores/true" method="post">
-  {foreach name=outer item=luchador from=$luchadores}
-    {foreach key=key item=item from=$luchador}
+  <form name="form" action="admin/modificar/luchadores/{$luchador.id_luchador}" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Nombre</span>
-        <input type="text" class="form-control" aria-label="..." name="nombre" value="{$item.nombre}">
+        <input type="text" class="form-control" aria-label="..." name="nombre" value="{$luchador.nombre}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -427,7 +425,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Apellido</span>
-        <input type="text" class="form-control" aria-label="..." name="apellido" value="{$item.apellido}">
+        <input type="text" class="form-control" aria-label="..." name="apellido" value="{$luchador.apellido}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -436,7 +434,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Edad</span>
-        <input type="text" class="form-control" aria-label="..." name="edad" value="{$item.edad}">
+        <input type="text" class="form-control" aria-label="..." name="edad" value="{$luchador.edad}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -445,7 +443,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Categoria</span>
-        <input type="text" class="form-control" aria-label="..." name="categoria" value="{$item.categoria}">
+        <input type="text" class="form-control" aria-label="..." name="categoria" value="{$luchador.categoria}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -454,7 +452,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Pais</span>
-        <input type="text" class="form-control" aria-label="..." name="pais" value="{$item.pais}">
+        <input type="text" class="form-control" aria-label="..." name="pais" value="{$luchador.pais}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -463,7 +461,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Historia</span>
-        <input type="text" class="form-control" aria-label="..." name="historia" value="{$item.historia}">
+        <input type="text" class="form-control" aria-label="..." name="historia" value="{$luchador.historia}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -472,7 +470,7 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Link</span>
-        <input type="text" class="form-control" aria-label="..." name="link" value="{$item.link}">
+        <input type="text" class="form-control" aria-label="..." name="link" value="{$luchador.link}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
@@ -481,13 +479,11 @@
     <div class="col-lg-6">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon3">Torneos Ganados</span>
-        <input type="text" class="form-control" aria-label="..." name="torneos_ganados" value="{$item.torneos_ganados}">
+        <input type="text" class="form-control" aria-label="..." name="torneos_ganados" value="{$luchador.torneos_ganados}">
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
-    {/foreach}
-  {/foreach}
   <div class="panel-body">
     Para modificar, cargue los datos con el boton celeste.
   </div>

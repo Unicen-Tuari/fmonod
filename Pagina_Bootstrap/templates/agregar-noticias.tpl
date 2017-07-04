@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Edicion Luchadores</title>
-    <base href="{$baseDir}">
-  </head>
-  <body>
-<div class="col-md-10 content collapse" id="mn">
+<div class="col-md-10 content collapse" id="an">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Editar Noticia
+    Agregar Noticia
   </div>
-  <form name="form" action="admin/modificar/noticias/true" method="post">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <span class="input-group-addon" id="basic-addon3">ID Noticia</span>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Numero <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-  <p><!-- Divider --></p>
+  <form name="form" action="admin/agregar/noticias/true" method="post">
   <div class="row">
     <div class="col-lg-6">
       <div class="input-group">
@@ -75,20 +50,12 @@
     </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->
   <p><!-- Divider --></p>
-  <div class="panel-body">
-    Para modificar, cargue los datos con el boton celeste.
-  </div>
-  <button class="btn btn-primary" type="submit">
-    <span class="glyphicon glyphicon-ok"></span>
+  <button class="btn btn-success" type="submit">
+    <span class="glyphicon glyphicon-upload"></span>
   </button>
   <a href="admin/" class="btn btn-danger">
     <span class="glyphicon glyphicon-remove"></span>
   </a>
-  <a href="admin/modificar/noticias" class="btn btn-info">
-    <span class="glyphicon glyphicon-cloud-download"></span>
-  </a>
   </form>
 </div>
 </div>
-</body>
-</html>
