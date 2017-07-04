@@ -18,7 +18,7 @@ class ModelLuchadores
 
   function InsertarLuchador($nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados)
   {
-    $consulta = $this->db->prepare("INSERT INTO luchadores (nombre, apellido, edad, categoria, pais, historia, link, torneos_ganados) ".
+    $consulta = $this->db->prepare("INSERT INTO luchadores (nombre, apellido, edad, id_categoria, pais, historia, link, torneos_ganados) ".
                 "VALUES (?,?,?,?,?,?,?,?)");
     $result = $consulta->execute(array($nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados));
     //var_dump($consulta->errorInfo());
@@ -32,8 +32,9 @@ class ModelLuchadores
 
   function ModificarLuchador($id_luchador,$nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados)
   {
-    $sentencia = $this->db->prepare("UPDATE luchadores SET nombre=?,apellido=?,edad=?,categoria=?,pais=?,historia=?,link=?,torneos_ganados=?,WHERE id_luchador=?");
+    $sentencia = $this->db->prepare("UPDATE luchadores SET nombre=?,apellido=?,edad=?,id_categoria=?,pais=?,historia=?,link=?,torneos_ganados=? WHERE id_luchador=?");
     $sentencia->execute(array($nombre, $apellido, $edad, $categoria, $pais, $historia, $link, $torneos_ganados,$id_luchador));
+    //var_dump($sentencia->errorInfo());
   }
 
   function EditarLuchador($id_luchador,$nombre, $apellido, $edad)
